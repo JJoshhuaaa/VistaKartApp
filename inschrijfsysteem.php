@@ -15,13 +15,12 @@
      $user = 'root';
      $password = '';
      $conn = new mysqli($host, $user, $password, $db);
-
         ?>
         
     <form action="action_page.php" method="post">
         <div class="imgcontainer">
             <img src="assets/inschrijven.png" alt="Avatar" class="avatar">
-            <h2>Registreer voor het Kart 2024 toernooi</h2>
+            <h2>Registreer voor het Vista Kart 2024 toernooi</h2>
         </div>
     
         <div class="container">
