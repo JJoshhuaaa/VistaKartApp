@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('assets/fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype'); /* Use the correct format */
+    font-weight: normal;
+    font-style: normal;
+  }
+
+:root {
+    --VistaGroen:  #00555C;
+    --VistaRood:    #EC644A;
+    --VistaGeel:    #FFF265;
+    --VistaWit:     #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
