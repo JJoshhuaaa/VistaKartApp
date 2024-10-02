@@ -10,7 +10,7 @@ include 'config.php'
     <link rel="stylesheet" href='inschrijfsysteem.css'>
 </head>
 <body>
-    <form action="action_page.php" method="post">
+    <form action="prijzen.html" method="post">
         <div class="imgcontainer">
             <img src="assets/inschrijven.png" alt="Avatar" class="avatar">
             <h2>Registreer voor het Vista Kart 2024 toernooi</h2>
