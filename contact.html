@@ -7,13 +7,55 @@
         <link href="contact.css" rel="stylesheet">
     </head>
     <body>
-    <header>
-        <h1>Contact</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link href="css/mainstyle.css" rel="stylesheet">
+    <link href="css/contact.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/vistalogo.png"  alt="Karting Logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="prijzen.html">Prijzen</a>
+            <a href="#">Toernooi</a>
+            <a href="contact.html">Contact</a>
+            <a href="inschrijfsysteem.php">Aanmelden</a>
+        </nav>
     </header>
     <container>
         <div>
             
+    <div class="container">
+        <div class="ContactInfo">
+            <h2>Contact Informatie</h2>
+            <p>Email: voorbeeld@voorbeeld.com</p>
+            <p>Phone: +310612345678</p>
         </div>
     </container>
     </body>
     </html>
+        <div class="ContactForm">
+            <h2>Bericht ons</h2>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Stuur bericht</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+</html>
