@@ -29,19 +29,19 @@ body {
     font-size: 18px;
 }
 
-.pricing-section {
+.contact-section {
     padding: 50px;
     text-align: center;
     background-color: #fff;
 }
 
-.pricing-section h1 {
+.contact-section h1 {
     font-size: 36px;
     margin-bottom: 30px;
     color: #333;
 }
 
-.pricing-cards {
+.section-card {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -72,12 +72,24 @@ body {
 
 .card h2 {
     font-size: 22px;
-    margin: 15px 0;
+    margin: 25px 0;
 }
 
 .card p {
     font-size: 16px;
-    margin-bottom: 10px;
+}
+
+.GegevensAlinea {
+    margin: 15px 0 7px 0;
+}
+
+.card p a {
+    text-decoration: none;
+    color: black;
+}
+
+.card p a:hover {
+    color: #EC644A;
 }
 
 .card button {
@@ -88,6 +100,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 20px;
 }
 
 .card button:hover {
@@ -111,12 +124,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    resize: vertical;
   }
+
+  
 
 footer {
     background-color: #00555C;
     color: #fff;
     text-align: center;
     padding: 20px;
-    margin-top: 50px;
 }
