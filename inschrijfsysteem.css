@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     width: 100%;
    
@@ -6,13 +11,14 @@ body {
 img {
     display: flex;
     width: 90px;
-    margin-top: 60px;
+    margin-top: 7px;
     margin-left: auto;
     margin-right: auto;
 }
 
 h2 {
     margin-left: 350px;
+    margin-top: 10px;
 }
 
 label,
@@ -33,9 +39,7 @@ input {
     padding-top: 2px;
     margin-top: 20px;
 }
-.container {
-display: flex;
-}
+
 .header {
     display: flex;
     justify-content: space-between;
