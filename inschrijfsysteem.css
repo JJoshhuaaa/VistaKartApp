@@ -11,7 +11,7 @@ img {
 }
 
 h2 {
-    margin-left: 410px;
+    margin-left: 350px;
 }
 
 label,
@@ -23,13 +23,12 @@ input {
     line-height: 30px;
 }
 
-.register {
+ .submit{
     background-color: rgb(120, 163, 238);
     display: flex;
-    width: 100px;
-    height: 30px;
-    margin-left: 520px;
-    padding-top: 5px;
+    width: 90px;
+    height: 40px;
+    margin-left: 460px;
+    padding-top: 2px;
     margin-top: 20px;
-
 }
