@@ -1,22 +1,26 @@
-     <!DOCTYPE html>
-<html lang="en">
-
+<?php 
+include 'config.php'
+?>
+<!DOCTYPE html>
+<html lang="nl">
 <head>
-    <title></title>
+    <title>Vista Kart 2024 Toernooi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href='style.css'>
+    <link rel="stylesheet" href='inschrijfsysteem.css'>
 </head>
 <body>
-     <?php
-     // Databaseverbinding
-     $host = 'localhost';
-     $db = 'vista toernooi';
-     $user = 'root';
-     $password = '';
-     $conn = new mysqli($host, $user, $password, $db);
-        ?>
-        
+     <header class="header">
+        <div class="logo">
+            <img src="img/vistalogo.png"  alt="Karting Logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="prijzen.html">Prijzen</a>
+            <a href="#">Toernooi</a>
+            <a href="contact.html">Contact</a>
+            <a href="inschrijfsysteem.php">Aanmelden</a>
+        </nav>
+    </header>
     <form action="action_page.php" method="post">
         <div class="imgcontainer">
             <img src="assets/inschrijven.png" alt="Avatar" class="avatar">
@@ -24,19 +28,20 @@
         </div>
     
         <div class="container">
-            <label for="email">Naam:</label>
-            <input type="text" name="email" required>
+            
+            <label for="name">Naam:</label>
+            <input type="text" name="name" required>
     
             <label for="email">E-mail:</label>
             <input type="email" name="email" required>
+            
             <label for="psw">Wachtwoord:</label>
             <input type="password" name="psw" required>
         </div>
+        <input type="submit" name="Submit" value="Registreren" class='submit'>
     </form>
-    <button type='register' class='register'>Registreren</button>
-    </body>
-    
-    </html>
-    
+</body>
+</html>
+
     
      
