@@ -5,13 +5,9 @@
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #f9f9f9;
     font-family: 'Raleway', sans-serif;
+    background-color: #f9f9f9;
 }
-
 
 .header {
     display: flex;
@@ -33,97 +29,94 @@ body {
     font-size: 18px;
 }
 
-.container {
-    flex: 1;
-    width: 90%;
-    max-width: 1200px;
-    min-width: 300px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
-    transition: width 0.3s ease-in-out;
-    min-height: 70vh;
+.pricing-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.pricing-section h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
     background-color: #f4f4f4;
+    border: 1px solid var( #EC644A);
+    border-radius: 10px;
+    transition: all 0.6s ease;
+    box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 450px;
+    text-align: left;
+}
+.card:hover {
+    cursor: default;
+    transform: translateY(-3px);
+    border: 1px solid var(#00555C);
+    box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
 }
 
-.container:hover {
-    transform: translateY(-25px);
-}
-.ContactInfo {
-    margin-bottom: 2rem;
+.card img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.ContactInfo h2 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.card h2 {
+    font-size: 22px;
+    margin: 15px 0;
 }
 
-.ContactForm h2 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.card p {
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
-form {
+.card button {
+    background-color: #EC644A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #FFF265;
+    color: #EC644A;
+}
+
+.ContactForm form {
     display: flex;
     flex-direction: column;
 }
 
-label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-input, textarea {
-    padding: 1rem;
-    margin-bottom: 2rem;
+.ContactForm input[type=text],
+.ContactForm input[type=email],
+.ContactForm textarea,
+.ContactForm select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
     border: 1px solid #ccc;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-}
-
-button {
-    padding: 1rem;
-    background-color: var(--VistaRood);
-    color: white;
-    border: none;
-    border-radius: 0.3rem;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: var(--VistaGroen);
-}
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
 
 footer {
+    background-color: #00555C;
+    color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    color: white;
-    margin-top: 2rem;
-}
-
-/* Responsive Styles */
-@media (min-width: 768px) {
-    .container {
-        width: 80%;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        width: 70%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        width: 60%;
-    }
-}
-
-@media (min-width: 1400px) {
-    .container {
-        width: 50%;
-    }
+    padding: 20px;
+    margin-top: 50px;
 }
