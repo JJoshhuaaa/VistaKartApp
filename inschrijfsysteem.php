@@ -30,6 +30,10 @@ include 'config.php'
     
             <label for="email">E-mail:</label>
             <input type="email" name="email" required>
+
+            <?php if (!empty($error_message)): ?>
+            <p style='color:red;'><?php echo $error_message; ?></p>
+            <?php endif; ?>
             
             <label for="psw">Wachtwoord:</label>
             <input type="password" name="psw" required>
