@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
-   
 }
 
 img {
@@ -17,7 +17,8 @@ img {
 }
 
 h2 {
-    margin-left: 350px;
+    text-align: center;
+    /* Zorgt ervoor dat de tekst altijd gecentreerd is */
     margin-top: 10px;
 }
 
@@ -30,12 +31,13 @@ input {
     line-height: 30px;
 }
 
- .submit{
+.submit {
     background-color: rgb(120, 163, 238);
     display: flex;
     width: 90px;
     height: 40px;
-    margin-left: 460px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 2px;
     margin-top: 20px;
 }
@@ -52,7 +54,6 @@ input {
     max-width: 150px;
     max-height: 40px;
 }
-
 
 .nav-menu a {
     color: #fff;
