@@ -26,19 +26,15 @@ include 'config.php'
            <img src="assets/inschrijven.png" alt="Avatar" class="avatar">
             <h2>Registreer voor het Vista Kart 2024 toernooi</h2>
             <label for="name">Naam:</label>
-            <input type="text" name="name" required>
+            <input type="text" name="naam" required>
     
             <label for="email">E-mail:</label>
             <input type="email" name="email" required>
-
-            <?php if (!empty($error_message)): ?>
-            <p style='color:red;'><?php echo $error_message; ?></p>
-            <?php endif; ?>
-            
             <label for="psw">Wachtwoord:</label>
-            <input type="password" name="psw" required>
+            <input type="password" name="wachtwoord" required>
         
         <input type="submit" name="Submit" value="Registreren" class='submit'>
+            
     </form>
 </body>
 </html>
