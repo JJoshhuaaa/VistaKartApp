@@ -2,12 +2,18 @@
 // Verbinding maken met de database
 include 'config.php'; // Zorg ervoor dat je 'config.php' de juiste databaseverbinding heeft
 
+$error_message = "";
+
+
+
 // Controleren of het formulier is verzonden
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Gegevens ophalen uit het formulier
-    $naam = mysqli_real_escape_string($link, $_POST['naam']); 
+    $name = mysqli_real_escape_string($link, $_POST['naam']); 
     $email = mysqli_real_escape_string($link, $_POST['email']);
-    $wachtwoord = mysqli_real_escape_string($link, $_POST['wachtwoord']); 
+    $password = mysqli_real_escape_string($link, $_POST['wachtwoord']); 
+
+    if (strpos($email, '@vistacollege.nl') !== false) {
     
     // Wachtwoord versleutelen
     $hashed_password = password_hash($wachtwoord, PASSWORD_DEFAULT); 
@@ -24,8 +30,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Er is iets misgegaan: " . mysqli_error($link);
     }
+}else{
+     echo "<p style='color:red;'>Onjuiste e-mail, alleen Vista College e-mail toegestaan.</p>";
+}
 
     // Sluiten van de databaseverbinding
     mysqli_close($link);
 }
+
 ?>
