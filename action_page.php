@@ -1,7 +1,5 @@
 <?php 
-include 'config.php'; // Zorg ervoor dat je 'config.php' de juiste databaseverbinding heeft
-
-$error_message = "";
+include 'config.php';
 
 // Controleren of het formulier is verzonden
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -10,8 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = mysqli_real_escape_string($link, $_POST['email']);
     $wachtwoord = mysqli_real_escape_string($link, $_POST['wachtwoord']); 
 
-    // Controleer of het e-mailadres eindigt op '@vistacollege.nl'
-    if (strpos($email, '@vistacollege.nl') !== false) {
         // Wachtwoord versleutelen
         $hashed_password = password_hash($wachtwoord, PASSWORD_DEFAULT); 
 
@@ -26,16 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             echo "Er is iets misgegaan: " . mysqli_error($link);
         }
-    } else {
-        // Redirect terug naar het formulier met een foutmelding
-        header("Location: inschrijfsysteem.php?error=Onjuiste e-mail, alleen Vista College e-mail toegestaan.");
-        exit();
-    }
-
+    } 
     // Sluiten van de databaseverbinding
     mysqli_close($link);
 }
-
-
 ?>
-
