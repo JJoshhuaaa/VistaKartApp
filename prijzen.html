@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/prijzen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Karting Prijzen</title>
 </head>
@@ -15,7 +16,7 @@
     <!--hij laat de header dynamisch in-->
     <div id="header-placeholder"></div>
     <!--import header-footer js-->
-    <script src="./header-footer/index.js"></script>
+    <script src="./header-footer/header-footer.js"></script>
     <!--import header-footer css-->
     <link rel="stylesheet" href="header-footer/header-footer.css">
 
@@ -74,31 +75,6 @@
         <p>© 2024 Vista Karting Area</p>
     </footer>
 </body>
-<script>
-
-const buttons = document.querySelectorAll('button[data-modal]');
-const closeButtons = document.querySelectorAll('.close');
-
-buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        const modalId = button.getAttribute('data-modal');
-        document.getElementById(modalId).style.display = 'block';
-    });
-});
-
-closeButtons.forEach(closeBtn => {
-    closeBtn.addEventListener('click', () => {
-        const modalId = closeBtn.getAttribute('data-modal');
-        document.getElementById(modalId).style.display = 'none';
-    });
-});
-
-window.addEventListener('click', (event) => {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-});
-
-</script>
+<!--Nooit css of js in de html doen-->
 
 </html>

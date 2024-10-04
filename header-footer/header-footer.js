@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Dynamisch de header CSS laden
       const link = document.createElement('link');
       link.rel = 'stylesheet';
-      link.href = 'header-footer/header-footer.css'; // Path naar het CSS bestand van de header
+      link.href = 'header-footer/header-footer.css';
       document.head.appendChild(link);
 
       // Hamburger menu functionaliteit
