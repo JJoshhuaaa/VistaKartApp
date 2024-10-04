@@ -26,7 +26,7 @@ body {
     color: #fff;
     margin: 0 15px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .pricing-section {
@@ -37,7 +37,7 @@ body {
 }
 
 .pricing-section h1 {
-    font-size: 36px;
+    font-size: 56px;
     margin-bottom: 30px;
     color: #333;
 }
@@ -47,6 +47,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    color: black;
 }
 
 .card {
@@ -56,12 +57,13 @@ body {
     transition: all 0.4s ease-in-out;
     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    width: 500px;
     text-align: left;
+    margin-top: 30px;
 }
 .card:hover {
     cursor: default;
-    transform: translateY(-25px);
+    transform: translateY(-15px);
     border: 1px solid var(#00555C);
     box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
 }
@@ -109,27 +111,54 @@ footer {
     position: fixed;
     z-index: 1;
     left: 0;
-    top: 0;
+    top: 0%;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-  }
+}
   
-  .modal-content {
+.modal-content {
+    position: relative;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
     background-color: white;
-    margin: 15% auto;
+    margin: 5% auto;
     padding: 20px;
     width: 80%;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 8px;
     text-align: center;
-  }
+    max-height: 80vh; 
+    overflow-y: auto;
+    padding: 20px; 
+    border-radius: 8px;
+}
   
-  .close {
+.close {
     position: absolute;
     right: 20px;
     top: 20px;
     font-size: 24px;
     cursor: pointer;
-  }
+<<<<<<< Updated upstream
+}
+.modal-image {
+    max-width: 100%;  
+    max-height: 200px; 
+    object-fit: contain; 
+    display: block; 
+    margin: 0 auto; 
+}
+
   
+=======
+  }
+
+
+@media only screen and (max-width: 600px) {
+    .nav-menu {
+        max-width: 200px;
+    }
+}
+>>>>>>> Stashed changes

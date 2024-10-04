@@ -36,7 +36,11 @@ CREATE TABLE `leerlingen`
   `naam` varchar
 (25) NOT NULL,
   `e-mail` varchar
+<<<<<<< HEAD
 (25) NOT NULL
+=======
+(25) NOT NULL,
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 COMMIT;
 

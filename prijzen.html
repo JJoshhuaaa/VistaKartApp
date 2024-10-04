@@ -27,81 +27,80 @@
         <h1>Karting Prijzen</h1>
         <div class="pricing-cards">
             <div class="card">
-                <img src="img/powerarea.png" alt="1 session">
-                <h2>1 session regular karting 15+</h2>
-                <p>€19.50 per persoon</p>
-                <p>1 session go karting</p>
-                <p>Minimumleeftijd: 15 jaar</p>
-                <p>Gratis helmverhuur, excl. balaclava</p>
-                <button>Boek nu!</button>
+                <h2>2e plaats</h2>
+                <img src="img/2nd.jpeg" alt="Zilveren medaille">
+                <button data-modal="modal-2">Kijk naar de prijs</button>
             </div>
             <div class="card">
-                <img src="img/powerarea (1).png" alt="2 sessions">
-                <h2>2 sessions regular karting 15+</h2>
-                <p>€37.50 per persoon</p>
-                <p>2 sessions go karting</p>
-                <p>Minimumleeftijd: 15 jaar</p>
-                <p>Gratis helmverhuur, excl. balaclava</p>
-                <button>Boek nu!</button>
+                <h2>1e plaats</h2>
+                <img src="img/1st.png" alt="Champion Cup">
+                <button data-modal="modal-1">Kijk naar de prijs</button>
             </div>
-            
             <div class="card">
-                <img src="img/powerarea (2).png" alt="3 sessions">
-                <h2>3 sessions regular karting 15+</h2>
-                <p>€49.95 per persoon</p>
-                <p>3 x 10 minuten racen</p>
-                <p>Minimumleeftijd: 15 jaar</p>
-                <p>Prijs excl. balaclava en handschoenen (€2.50 per set)</p>
-                <button>Boek nu!</button>
-            </div>
+                <h2>3e plaats</h2>
 
-            <div class="card">
-                <img src="img/powerarea (2).png" alt="4 sessions">
-                <h2>4 sessions regular karting 15+</h2>
-                <p>€55.95 per persoon</p>
-                <p>3 x 10 minuten racen</p>
-                <p>Minimumleeftijd: 15 jaar</p>
-                <p>Prijs excl. balaclava en handschoenen (€2.50 per set)</p>
-                <button>Boek nu!</button>
+                <img src="img/3d.jpg" alt="Bronzen medaille">
+                <button data-modal="modal-3">Kijk naar de prijs</button>
             </div>
         </div>
     </section>
-    <div id="modal" class="modal">
+    
+
+    <div id="modal-1" class="modal">
         <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Boek je sessie</h2>
-          <p>Kies je gewenste aantal sessies en vul je gegevens in om te boeken.</p>
-          <!-- Форма или дополнительная информация -->
+            <span class="close" data-modal="modal-1">&times;</span>
+            <img src="img/cup.png" alt="">
+            <h2>Hoofdprijs: 1000 euro in contanten en de kampioensbeker</h2>
+            <p> De winnaar van het toernooi ontvangt de hoofdprijs van 1000 euro en de kampioensbeker, die uw overwinning en vaardigheden op de baan symboliseert. Deze beker wordt een blijvende herinnering en kan met trots worden getoond. Daarnaast krijgt de winnaar de mogelijkheid om deel te nemen aan VIP-karting evenementen in de toekomst. De prijs voor de eerste plaats is niet alleen een financiële beloning, maar ook een erkenning van uw vaardigheden en snelheid.</p>
         </div>
-      </div>
+    </div>
+    
+    <div id="modal-2" class="modal">
+        <div class="modal-content">
+            <img src="img/2nd.jpg" alt="">
+            <span class="close" data-modal="modal-2">&times;</span>
+            <h2>Prijs: 500 euro in contanten en een zilveren medaille</h2>
+            <p>De tweede plaats ontvangt 500 euro en een zilveren medaille. Deze prijs getuigt van uw uitstekende vaardigheden en uw verlangen om op hoog niveau te concurreren. De zilveren medaille is een teken dat u tot het uiterste heeft gestreden en opmerkelijke resultaten heeft behaald door tot de beste rijders van het toernooi te behoren. Deze prijs is een geweldige bevestiging van uw bekwaamheid en uitstekende vorm tijdens de competitie.</p>
+        </div>
+    </div>
+    
+    <div id="modal-3" class="modal">
+        <div class="modal-content">
+            <img src="img/3.jpg" alt="">
+            <span class="close" data-modal="modal-3">&times;</span>
+            <h2>Prijs: 250 euro in contanten en een bronzen medaille.</h2>
+            <p>De prijs voor de derde plaats bestaat uit 250 euro en een bronzen medaille. Dit is een beloning voor degenen die indrukwekkende resultaten hebben laten zien tijdens het toernooi, waarbij ze moeilijke races en sterke tegenstanders hebben overwonnen. De bronzen medaille is een symbool van doorzettingsvermogen en het behalen van hoge resultaten, die u met trots aan uw vrienden en familie kunt laten zien. Deze prijs is een bewijs van uw buitengewone inspanningen en uw streven naar overwinning.</p>
+        </div>
+    </div>
+    
     
     <footer>
         <p>© 2024 Vista Karting Area</p>
     </footer>
 </body>
 <script>
-    // Получаем элементы
-const modal = document.getElementById('modal');
-const closeBtn = document.querySelector('.close');
-const bookButtons = document.querySelectorAll('.card button');
 
-// Функция для открытия модального окна
-bookButtons.forEach(button => {
-button.addEventListener('click', () => {
-modal.style.display = 'block';
-});
-});
+const buttons = document.querySelectorAll('button[data-modal]');
+const closeButtons = document.querySelectorAll('.close');
 
-// Функция для закрытия модального окна
-closeBtn.addEventListener('click', () => {
-modal.style.display = 'none';
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modalId = button.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'block';
+    });
 });
 
-// Закрытие окна при клике вне модального контента
+closeButtons.forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+        const modalId = closeBtn.getAttribute('data-modal');
+        document.getElementById(modalId).style.display = 'none';
+    });
+});
+
 window.addEventListener('click', (event) => {
-if (event.target === modal) {
-modal.style.display = 'none';
-}
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
+    }
 });
 
 </script>

@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+=======
+    <!DOCTYPE html>
+    <html lang="nl">
+    <head>
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
     <title>Vista Kart 2024 Toernooi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='css/inschrijfsysteem.css'>
+<<<<<<< HEAD
 </head>
 <body>
     <header class="header">
@@ -18,6 +25,21 @@
             <a href="inschrijfsysteem.php">Aanmelden</a>
         </nav>
     </header>
+=======
+    </head>
+      <body>
+      <header class="header">
+        <div class="logo">
+            <img src="img/vistalogo.png" alt="Karting Logo">
+             </div>
+             <nav class="nav-menu">
+             <a href="prijzen.html">Prijzen</a>
+             <a href="#">Toernooi</a>
+             <a href="contact.html">Contact</a>
+             <a href="inschrijfsysteem.php">Aanmelden</a>
+             </nav>
+             </header>
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
 
     <form action="action_page.php" method="post">
         <div class="imgcontainer">
@@ -32,9 +54,16 @@
 
             <!-- Hier verschijnt de foutmelding als de e-mail onjuist is -->
             <?php if (isset($_GET['error']) && $_GET['error'] == 'invalid_email'): ?>
+<<<<<<< HEAD
                 <p style="color:red; text-align:center;">Onjuiste e-mail.</p>
             <?php endif; ?>
                 <!-- Hier verschijnt de foutmelding als de e-mail al bestaat -->
+=======
+                <p style="color:red; text-align:center;">Onjuiste e-mail. Alleen e-mails van @vistacollege.nl zijn toegestaan.</p>
+            <?php endif; ?>
+
+            <!-- Hier verschijnt de foutmelding als de e-mail al bestaat -->
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
             <?php if (isset($_GET['error']) && $_GET['error'] == 'email_exists'): ?>
                 <p style="color:red; text-align:center;">Dit e-mailadres is al geregistreerd.</p>
             <?php endif; ?>

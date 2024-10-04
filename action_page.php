@@ -8,19 +8,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $naam = mysqli_real_escape_string($link, $_POST['naam']);
     $email = mysqli_real_escape_string($link, $_POST['email']);
 
+<<<<<<< HEAD
        $allowed_emails = [
+=======
+    $allowed_emails = [
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
         '518997@vistacollege.nl',
         '517255@vistacollege.nl',
         '516872@vistacollege.nl',
         '510586@vistacollege.nl',
         '92015@vistacollege.nl'
+<<<<<<< HEAD
         ];
          if (!in_array($email, $allowed_emails)) {
+=======
+    ];
+
+    // Controleer of het ingevoerde e-mailadres in de lijst van toegestane e-mails staat
+    if (!in_array($email, $allowed_emails)) {
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
         // Redirect naar formulierpagina met foutmelding
         header("Location: inschrijfsysteem.php?error=invalid_email");
         exit();
     } else {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
         // Controleer of het e-mailadres al bestaat in de database
         $check_email_query = "SELECT * FROM leerlingen WHERE email = '$email'";
         $result = mysqli_query($link, $check_email_query);
@@ -30,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             header("Location: inschrijfsysteem.php?error=email_exists");
             exit();
         } else {
+<<<<<<< HEAD
         // SQL-query om gegevens in de database in te voegen
         $sql = "INSERT INTO leerlingen (naam, email) VALUES ('$naam', '$email')";
         
@@ -47,6 +62,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Sluiten van de databaseverbinding
     mysqli_close($link);
 }
+=======
+            // SQL-query om gegevens in de database in te voegen
+            $sql = "INSERT INTO leerlingen (naam, email) VALUES ('$naam', '$email')";
+
+            // Uitvoeren van de query en controleren op succes
+            if (mysqli_query($link, $sql)) {
+                // Registratie geslaagd, redirect naar prijzenpagina
+                header("Location: prijzen.html");
+                exit();
+            } else {
+                echo "Er is iets misgegaan: " . mysqli_error($link);
+            }
+        }
+    }
+
+    // Sluiten van de databaseverbinding
+    mysqli_close($link);
+>>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
 ?>
 
 
