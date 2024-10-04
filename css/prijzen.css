@@ -47,6 +47,7 @@ body {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
+    color: black;
 }
 
 .card {
@@ -58,6 +59,7 @@ body {
     padding: 20px;
     width: 500px;
     text-align: left;
+    margin-top: 30px;
 }
 .card:hover {
     cursor: default;
