@@ -79,13 +79,6 @@ body {
     color: #EC644A;
 }
 
-footer {
-    background-color: #00555C;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 5px;
-}
 
 .modal {
     display: none; 

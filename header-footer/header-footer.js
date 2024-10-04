@@ -27,4 +27,3 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
   document.getElementById('preloader').style.display = 'none';
 });
-
