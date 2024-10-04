@@ -47,5 +47,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Sluiten van de databaseverbinding
     mysqli_close($link);
-}
 ?>
