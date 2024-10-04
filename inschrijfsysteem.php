@@ -10,17 +10,6 @@
     <link rel='stylesheet' href='css/inschrijfsysteem.css'>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="img/vistalogo.png" alt="Karting Logo">
-        </div>
-        <nav class="nav-menu">
-            <a href="prijzen.html">Prijzen</a>
-            <a href="#">Toernooi</a>
-            <a href="contact.html">Contact</a>
-            <a href="inschrijfsysteem.php">Aanmelden</a>
-        </nav>
-    </header>
     </head>
       <body>
       <header class="header">
@@ -48,12 +37,7 @@
 
             <!-- Hier verschijnt de foutmelding als de e-mail onjuist is -->
             <?php if (isset($_GET['error']) && $_GET['error'] == 'invalid_email'): ?>
-
-                <p style="color:red; text-align:center;">Onjuiste e-mail.</p>
-            <?php endif; ?>
-                <!-- Hier verschijnt de foutmelding als de e-mail al bestaat -->
-
-                <p style="color:red; text-align:center;">Onjuiste e-mail. Alleen e-mails van @vistacollege.nl zijn toegestaan.</p>
+             <p style="color:red; text-align:center;">Onjuiste e-mail.</p>
             <?php endif; ?>
             <!-- Hier verschijnt de foutmelding als de e-mail al bestaat -->
             <?php if (isset($_GET['error']) && $_GET['error'] == 'email_exists'): ?>
