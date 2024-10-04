@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
+    <!DOCTYPE html>
+    <html lang="nl">
+    <head>
     <title>Vista Kart 2024 Toernooi</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='css/inschrijfsysteem.css'>
-</head>
-<body>
-    <header class="header">
+    </head>
+      <body>
+      <header class="header">
         <div class="logo">
             <img src="img/vistalogo.png" alt="Karting Logo">
-        </div>
-        <nav class="nav-menu">
-            <a href="prijzen.html">Prijzen</a>
-            <a href="#">Toernooi</a>
-            <a href="contact.html">Contact</a>
-            <a href="inschrijfsysteem.php">Aanmelden</a>
-        </nav>
-    </header>
+             </div>
+             <nav class="nav-menu">
+             <a href="prijzen.html">Prijzen</a>
+             <a href="#">Toernooi</a>
+             <a href="contact.html">Contact</a>
+             <a href="inschrijfsysteem.php">Aanmelden</a>
+             </nav>
+             </header>
 
     <form action="action_page.php" method="post">
         <div class="imgcontainer">
