@@ -31,9 +31,6 @@
             <?php if (isset($_GET['error'])): ?>
                 <p style='color:red;'><?php echo htmlspecialchars($_GET['error']); ?></p>
             <?php endif; ?>
-            
-            <label for="psw">Wachtwoord:</label>
-            <input type="password" name="psw" required>
         
             <input type="submit" name="Submit" value="Registreren" class='submit'>
         </div>

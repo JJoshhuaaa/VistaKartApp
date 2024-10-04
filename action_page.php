@@ -6,13 +6,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Gegevens ophalen uit het formulier
     $naam = mysqli_real_escape_string($link, $_POST['naam']); 
     $email = mysqli_real_escape_string($link, $_POST['email']);
-    $wachtwoord = mysqli_real_escape_string($link, $_POST['wachtwoord']); 
-
-        // Wachtwoord versleutelen
-        $hashed_password = password_hash($wachtwoord, PASSWORD_DEFAULT); 
 
         // SQL-query om gegevens in de database in te voegen
-        $sql = "INSERT INTO leerlingen (naam, email, wachtwoord) VALUES ('$naam', '$email', '$hashed_password')";
+        $sql = "INSERT INTO leerlingen (naam, email) VALUES ('$naam', '$email')";
         
         // Uitvoeren van de query en controleren op succes
         if (mysqli_query($link, $sql)) {
