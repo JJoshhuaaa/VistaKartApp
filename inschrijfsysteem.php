@@ -25,7 +25,7 @@
             <label for="name">Naam:</label>
             <input type="text" name="name" required>
 
-            <label for="email">E-mail:</label>
+            <label for="email">E-mailad:</label>
             <input type="email" name="email" required>
 
             <?php if (isset($_GET['error'])): ?>
