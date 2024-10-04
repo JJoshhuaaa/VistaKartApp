@@ -59,6 +59,7 @@ body {
     padding: 20px;
     width: 300px;
     text-align: left;
+    margin-top: 30px;
 }
 .card:hover {
     cursor: default;
