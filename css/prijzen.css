@@ -9,25 +9,6 @@ body {
     background-color: #f9f9f9;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #00555C;
-    padding: 20px;
-}
-.logo img {
-    max-width: 150px; 
-    max-height: 40px; 
-}
-
-
-.nav-menu a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    font-size: 20px;
-}
 
 .pricing-section {
     padding: 50px;
@@ -98,13 +79,6 @@ body {
     color: #EC644A;
 }
 
-footer {
-    background-color: #00555C;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 5px;
-}
 
 .modal {
     display: none; 
@@ -141,7 +115,6 @@ footer {
     top: 20px;
     font-size: 24px;
     cursor: pointer;
-<<<<<<< Updated upstream
 }
 .modal-image {
     max-width: 100%;  
@@ -151,14 +124,10 @@ footer {
     margin: 0 auto; 
 }
 
-  
-=======
-  }
-
 
 @media only screen and (max-width: 600px) {
     .nav-menu {
         max-width: 200px;
     }
 }
->>>>>>> Stashed changes
+
