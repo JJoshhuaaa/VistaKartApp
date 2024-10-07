@@ -20,9 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '92015@vistacollege.nl'
     ];
 
-    // Controleer of het e-mailadres in de lijst staat
     if (!in_array($email, $allowed_emails)) {
-        // Redirect naar formulierpagina met foutmelding
         header("Location: inschrijfsysteem.php?error=invalid_email");
         exit();
     }
