@@ -32,6 +32,9 @@
             <label for="name">Naam:</label>
             <input type="text" name="naam" required>
 
+             <label for="last name">Achternsaam:</label>
+             <input type="text" name="achternaam" required>
+
             <label for="email">E-mail:</label>
             <input type="email" name="email" required>
 
