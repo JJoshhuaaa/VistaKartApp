@@ -48,7 +48,7 @@ include 'lang.php'; // Inclusief de taalvariabelen
             <input type="email" name="email" required>
 
             <!-- Hier verschijnt de foutmelding als de e-mail onjuist is -->
-            <?php if (isset($_GET['error']) && $_GET['error'] == 'invalid_email'): ?>
+            <?php if (isset($_GET["error"]) && $_GET["error"] == "invalid_email"): ?>
                 <p style="color:red; text-align:center;"><?php echo $texts[$lang]['invalid_email']; ?></p>
             <?php endif; ?>
             <!-- Hier verschijnt de foutmelding als de e-mail al bestaat -->
