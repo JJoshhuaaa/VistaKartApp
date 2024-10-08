@@ -25,20 +25,22 @@ body {
 
 .pricing-cards {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
     color: black;
 }
 
 .card {
+    box-sizing: border-box;
     background-color: #f4f4f4;
     border: 1px solid var( #EC644A);
     border-radius: 10px;
     transition: all 0.4s ease-in-out;
     box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 500px;
+    min-width: 300px;
+    width: 32%;
     text-align: left;
     margin-top: 30px;
 }
@@ -128,6 +130,13 @@ body {
 @media only screen and (max-width: 600px) {
     .nav-menu {
         max-width: 200px;
+    }
+}
+@media only screen and (max-width: 1600px) {
+    .pricing-cards {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
