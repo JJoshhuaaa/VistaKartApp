@@ -1,17 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 02. Okt 2024 um 09:49
--- Server-Version: 10.4.32-MariaDB
--- PHP-Version: 8.0.30
+-- Generation Time: Oct 08, 2024 at 12:25 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.1.12
 
-SET SQL_MODE
-= "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
-SET time_zone
-= "+00:00";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -20,28 +18,42 @@ SET time_zone
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Datenbank: `vista toernooi`
+-- Database: `vista_toernooi`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `leerlingen`
+-- Table structure for table `leerlingen`
 --
 
-CREATE TABLE `leerlingen`
-(
-  `id` int
-(5) NOT NULL,
-  `naam` varchar
-(25) NOT NULL,
-  `e-mail` varchar
-<<<<<<< HEAD
-(25) NOT NULL
-=======
-(25) NOT NULL,
->>>>>>> 64bc687cb8243101bfc122096955438ae3a72112
+CREATE TABLE `leerlingen` (
+  `id` int(5) NOT NULL,
+  `naam` varchar(25) NOT NULL,
+  `achternaam` text NOT NULL,
+  `email` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `leerlingen`
+--
+ALTER TABLE `leerlingen`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `leerlingen`
+--
+ALTER TABLE `leerlingen`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
