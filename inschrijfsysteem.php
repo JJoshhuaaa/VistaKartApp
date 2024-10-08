@@ -10,19 +10,15 @@
     <link rel='stylesheet' href='css/inschrijfsysteem.css'>
 </head>
 <body>
-    </head>
-      <body>
-      <header class="header">
-        <div class="logo">
-            <img src="img/vistalogo.png" alt="Karting Logo">
-             </div>
-             <nav class="nav-menu">
-             <a href="prijzen.html">Prijzen</a>
-             <a href="#">Toernooi</a>
-             <a href="contact.html">Contact</a>
-             <a href="inschrijfsysteem.php">Aanmelden</a>
-             </nav>
-             </header>
+    <!--preload de plek voor de header-->
+    <div id="preloader"></div>
+    <!--hij laat de header dynamisch in-->
+    <div id="header-placeholder"></div>
+    <!--import header-footer js-->
+    <script src="./header-footer/header-footer.js"></script>
+    <!--import header-footer css-->
+    <link rel="stylesheet" href="header-footer/header-footer.css">
+
 
     <form action="action_page.php" method="post">
         <div class="imgcontainer">
@@ -47,7 +43,7 @@
                 <p style="color:red; text-align:center;">Dit e-mailadres is al geregistreerd.</p>
             <?php endif; ?>
 
-            <input type="submit" name="Submit" value="Registreren" class='submit'>
+            <input type="submit" name="Submit" value="Inschrijven" class='submit'>
         </div>
     </form>
 </body>
