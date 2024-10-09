@@ -10,7 +10,7 @@
         exit;
     }
 
-    $uri_split = explode('/', $_SERVER['REQUEST_URI']);
+    $uri_split = explode('/', strtok($_SERVER['REQUEST_URI'], '?'));
 
     $searching = true;
     $depth = 0;
