@@ -16,13 +16,15 @@
     <main class="main-content">
         <h1>Inschrijvingen</h1>
 
-        <div id="entries">
+        <div id="entries" style="display: flex;flex-direction: column;">
 
         </div>
     </main>
 
     <template id="entry-template">
-        <p d-link="username">p tag</p>
+        <span d-link="naam" style="color: red;"></span>
+        <span d-link="achternaam" style="color: green;"></span>
+        <span d-link="email" style="color: blue;"></span>
     </template>
 
     <script src="header.js"></script>
@@ -41,9 +43,12 @@
                 for(let item of Array.from(content.querySelectorAll('*')).filter(x => x.hasAttribute('d-link')))
                     dataLinkItems[item.getAttribute('d-link')] = item;
 
-                dataLinkItems['username'].textContent = entry.naam;
+                dataLinkItems['naam'].textContent = entry.naam;
+                dataLinkItems['achternaam'].textContent = entry.achternaam;
+                dataLinkItems['email'].textContent = entry.email;
 
-                entriesElem.append(content);
+                entryElem.append(content);
+                entriesElem.append(entryElem);
             }
         })();
     </script>
