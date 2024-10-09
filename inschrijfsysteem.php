@@ -21,7 +21,7 @@
     <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
               
             <form action="action_page.php" method="post">
-            <img src="assets/inschrijven.png" alt="avatar">
+            <img src="img/inschrijven.png" alt="avatar">
             <h2><?php echo $lang['form_title']; ?></h2>
             
             <label for="name"><?php echo $lang['name'];?></label>
