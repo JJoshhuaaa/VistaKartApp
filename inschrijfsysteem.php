@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl"> 
 <head>
     <title>VISTA Kart App</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel='stylesheet' href='css/inschrijfsysteem.css'>
+    <link rel='stylesheet' href='css/inschrijven.css'>
 </head>
-<body>
+<body?>
     <!--preload de plek voor de header-->
     <div id="preloader"></div>
     <!--hij laat de header dynamisch in-->
@@ -39,7 +40,9 @@
             <?php endif; ?>
 
              <input type="submit" name="Submit" value="Inschrijven" class='submit'>
+              <a href="?lang=en" id='language' class='en'>EN</a> |
+              <a href="?lang=nl" id='language'>NL</a>
            
             </form>
-
-    
+            </body>
+           </html>
