@@ -11,14 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
       link.rel = 'stylesheet';
       link.href = 'header-footer/header-footer.css';
       document.head.appendChild(link);
-
-      // Hamburger menu functionaliteit
-      const menuIcon = document.getElementById('menu-icon');
-      const navLinks = document.getElementById('nav-links');
-
-      menuIcon.addEventListener('click', () => {
-        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-      });
     })
     .catch(error => console.error('Error loading header:', error));
 });
@@ -27,3 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('load', function() {
   document.getElementById('preloader').style.display = 'none';
 });
+
+// overlay
+// Open het overlay menu en verberg de hamburger-icon
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+  document.getElementById("menu-icon").classList.add("hidden");
+}
+
+// Sluit het overlay menu en toon de hamburger-icon weer
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+  document.getElementById("menu-icon").classList.remove("hidden");
+}

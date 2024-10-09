@@ -10,22 +10,17 @@
         exit;
     }
 
-    $uri_split = explode('/', $_SERVER['REQUEST_URI']);
+    $uri_split = explode('/', strtok($_SERVER['REQUEST_URI'], '?'));
 
     $searching = true;
     $depth = 0;
-    while($searching && $depth < 10)
+    while($depth < 10)
     {
-        try {
-            if(strcmp(strtolower($uri_split[$depth]), 'adminpanel'))
-            {
-                $searching = false;
-                array_shift($uri_split);
-            }
-        } finally {
+        if($uri_split[$depth] == 'adminpanel')
+        {
             array_shift($uri_split);
-            $depth++;
-        }
+            break;
+        } else array_shift($uri_split);
     }
 
     $rel_path = implode('/', $uri_split);
@@ -37,4 +32,16 @@
         header('HTTP/1.0 404 Not found');
         include_once '404.html';
     }
-    else include $rel_path;
+    else {
+        header('Content-Type: ' . resolve_content_type_ext($rel_path));
+        include $rel_path;
+    }
+
+    function resolve_content_type_ext(string $path) : string {
+        $extension = strtolower(pathinfo($path, PATHINFO_EXTENSION));
+        $pre_def = [
+            'css' => 'text/css',
+            'js' => 'test/javascript'
+        ];
+        return $pre_def[$extension] ?? mime_content_type($path);
+    }
