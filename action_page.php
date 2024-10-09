@@ -7,7 +7,7 @@ $error_message = "";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Gegevens ophalen uit het formulier
     $naam = mysqli_real_escape_string($link, $_POST['naam']); 
-     $achternaam = mysqli_real_escape_string($link, $_POST['achternaam']); 
+    $achternaam = mysqli_real_escape_string($link, $_POST['achternaam']); 
     $email = mysqli_real_escape_string($link, $_POST['email']);
    
 

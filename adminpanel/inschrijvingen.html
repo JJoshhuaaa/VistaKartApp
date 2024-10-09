@@ -15,8 +15,37 @@
     <div id="sidebar-container"></div>
     <main class="main-content">
         <h1>Inschrijvingen</h1>
+
+        <div id="entries">
+
+        </div>
     </main>
 
+    <template id="entry-template">
+        <p d-link="username">p tag</p>
+    </template>
+
     <script src="header.js"></script>
+    <script>
+        const templateElem = document.querySelector('template[id="entry-template"]');
+        const entriesElem = document.querySelector('div[id="entries"]');
+
+        (async() => {
+            const entries = await (await fetch('rest.php?path=inschrijvingen')).json();
+            for(let entry of entries)
+            {
+                let entryElem = document.createElement('div');
+                const content = templateElem.content.cloneNode(true);
+
+                const dataLinkItems = {};
+                for(let item of Array.from(content.querySelectorAll('*')).filter(x => x.hasAttribute('d-link')))
+                    dataLinkItems[item.getAttribute('d-link')] = item;
+
+                dataLinkItems['username'].textContent = entry.naam;
+
+                entriesElem.append(content);
+            }
+        })();
+    </script>
 </body>
 </html>
