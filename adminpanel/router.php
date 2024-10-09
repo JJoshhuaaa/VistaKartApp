@@ -27,7 +27,7 @@
     if(empty($rel_path))
         $rel_path = 'admin.html';
 
-    if(!file_exists($rel_path))
+    if(!file_exists($rel_path) || $rel_path === 'router.php')
     {
         header('HTTP/1.0 404 Not found');
         include_once '404.html';
