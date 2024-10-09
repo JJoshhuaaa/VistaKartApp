@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if (isset($_GET['lang'])) {
     $language = $_GET['lang'];
     $_SESSION['language'] = $language;
@@ -32,7 +31,7 @@ if ($language == 'nl') {
         'submit' => 'Register',
         'invalid_email' => 'Invalid email.',
         'email_exists' => 'This email address is already registered.',
-        'button' => 'register',
+        'button' => 'Register',
     );
 }
 ?>
