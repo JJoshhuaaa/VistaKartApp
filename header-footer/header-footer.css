@@ -31,6 +31,13 @@
     margin: 0 15px;
     text-decoration: none;
     font-size: 20px;
+    border-bottom: 0.5px solid transparent;
+    transition: border 0.2s ease-in-out;
+    padding-bottom: 2px;
+}
+
+.nav-menu a:hover {
+    border-bottom: white 0.5px solid;
 }
 
 /* Mobiele versie / hamburger menu */
@@ -203,11 +210,13 @@
 .footer_content_column_text a {
     color: #fff;
     text-decoration: none; 
-    transition: color 0.3s ease;
+    border-bottom: 0.5px solid transparent;
+    transition: border 0.2s ease-in-out;
+    padding-bottom: 2px;
 }
 
 .footer_content_column_text a:hover {
-    text-decoration: underline;
+    border-bottom: white 0.5px solid;
 }
 
 .footer_bottom {
