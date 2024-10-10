@@ -59,9 +59,9 @@ body {
     width: 450px;
     text-align: left;
 }
+
 .card:hover {
     cursor: default;
-    transform: translateY(-3px);
     border: 1px solid var(#00555C);
     box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
 }

@@ -48,10 +48,8 @@
             </div>
         </div>
     </section>
-    <footer>
-        <p>© 2024 Vista Karting Area</p>
-    </footer>
-
+    
+    <?php include 'footer.php'; ?> 
 
 </body>
 </html>

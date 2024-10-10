@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/mainstyle.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
             <div class="text-section">
                 <h1>HET SPANNENSTE KARTTOERNOOI</h1>
                 <p>Schrijf je nu in voor een onvergetelijke ervaring vol snelheid en competitie. Alleen de snelste wint!</p>
-                <a href="inschrijven.html" class="btn-inschrijven">Schrijf je nu in</a>
+                <a href="inschrijven.php" class="btn-inschrijven">Schrijf je nu in</a>
 
             </div>
             <div class="image-section">
@@ -33,8 +33,6 @@
             </div>
         </div>
     </div>
-    <footer>
-        <p>© 2024 Vista Karting Area</p>
-    </footer>
+    <?php include 'footer.php'; ?> 
 </body>
 </html>

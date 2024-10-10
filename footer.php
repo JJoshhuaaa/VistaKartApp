@@ -18,8 +18,8 @@
                 <div class="footer_content_column_text">
                     <h3>VISTA Karting</h3>
                     <ul>
-                        <li><a href="Aanmelden.html">Aanmelden</a></li>
-                        <li><a href="contact.html">Contact & Locatie</a></li>
+                        <li><a href="Aanmelden.php">Aanmelden</a></li>
+                        <li><a href="contact.php">Contact & Locatie</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,9 +28,9 @@
                 <div class="footer_content_column_text">
                     <h3>Informatie</h3>
                     <ul>
-                        <li><a href="Info.html">Informatie</a></li>
-                        <li><a href="prijzen.html">Prijzen</a></li>
-                        <li><a href="teams.html">Teams</a></li>
+                        <li><a href="Info.php">Informatie</a></li>
+                        <li><a href="prijzen.php">Prijzen</a></li>
+                        <li><a href="teams.php">Teams</a></li>
                     </ul>
                 </div>
             </div>
