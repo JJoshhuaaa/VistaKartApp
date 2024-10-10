@@ -127,12 +127,12 @@ body {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media  (max-width: 768px) {
     .nav-menu {
         max-width: 200px;
     }
 }
-@media only screen and (max-width: 1280px) {
+@media (max-width: 1280px) {
     .pricing-cards {
         justify-content: center;
         align-items: center;
