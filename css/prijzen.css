@@ -117,7 +117,20 @@ body {
     display: block; 
     margin: 0 auto; 
 }
-
+.en {
+    font-size: 20px;
+    position: flex;
+    color: #EC644A;
+    text-decoration: none;
+    border: none;
+}
+.nl {
+    font-size: 20px;
+    position: flex;
+    color: #EC644A;
+    text-decoration: none;
+    border: none;
+}
 
 @media  (max-width: 768px) {
     .nav-menu {
