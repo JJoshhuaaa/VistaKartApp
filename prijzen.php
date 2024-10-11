@@ -22,15 +22,14 @@
     <!--import header-footer css-->
     <link rel="stylesheet" href="header-footer/header-footer.css">
     
-    <br>
-    <p class="lang"><button id='language' class='en'>EN</button> |<button  id='language' class="nl">NL</button></p>
+    <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
     <section class="pricing-section">
         <h1>Karting Prijzen</h1>
         
         <div class="pricing-cards">
             <div class="card">
                 <h2>2e plaats</h2>
-                <img src="img/2nd.png" loading="lazy" alt="Zilveren medaille">
+                <img src="img/2nd.jpeg" loading="lazy" alt="Zilveren medaille">
                 <button data-modal="modal-2">Kijk naar de prijs</button>
             </div>
             <div class="card">
@@ -41,7 +40,7 @@
             <div class="card">
                 <h2>3e plaats</h2>
 
-                <img src="img/3rd.png" loading="lazy" alt="Bronzen medaille">
+                <img src="img/3d.jpg" loading="lazy" alt="Bronzen medaille">
                 <button data-modal="modal-3">Kijk naar de prijs</button>
             </div>
         </div>
@@ -51,7 +50,7 @@
     <div id="modal-1" class="modal">
         <div class="modal-content">
             <span class="close" data-modal="modal-1">&times;</span>
-            <img src="img/1.png" loading="lazy" alt="">
+            <img src="img/cup.png" loading="lazy" alt="">
             <h2>Hoofdprijs: 1000 euro in contanten en de kampioensbeker</h2>
             <p> De winnaar van het toernooi ontvangt de hoofdprijs van 1000 euro en de kampioensbeker, die uw overwinning en vaardigheden op de baan symboliseert. Deze beker wordt een blijvende herinnering en kan met trots worden getoond. Daarnaast krijgt de winnaar de mogelijkheid om deel te nemen aan VIP-karting evenementen in de toekomst. De prijs voor de eerste plaats is niet alleen een financiële beloning, maar ook een erkenning van uw vaardigheden en snelheid.</p>
         </div>
@@ -59,7 +58,7 @@
     
     <div id="modal-2" class="modal">
         <div class="modal-content">
-            <img src="img/2.png" loading="lazy" alt="">
+            <img src="img/2nd.jpg" loading="lazy" alt="">
             <span class="close" data-modal="modal-2">&times;</span>
             <h2>Prijs: 500 euro in contanten en een zilveren medaille</h2>
             <p>De tweede plaats ontvangt 500 euro en een zilveren medaille. Deze prijs getuigt van uw uitstekende vaardigheden en uw verlangen om op hoog niveau te concurreren. De zilveren medaille is een teken dat u tot het uiterste heeft gestreden en opmerkelijke resultaten heeft behaald door tot de beste rijders van het toernooi te behoren. Deze prijs is een geweldige bevestiging van uw bekwaamheid en uitstekende vorm tijdens de competitie.</p>
@@ -68,7 +67,7 @@
     
     <div id="modal-3" class="modal">
         <div class="modal-content">
-            <img src="img/3.png" loading="lazy" alt="">
+            <img src="img/3.jpg" loading="lazy" alt="">
             <span class="close" data-modal="modal-3">&times;</span>
             <h2>Prijs: 250 euro in contanten en een bronzen medaille.</h2>
             <p>De prijs voor de derde plaats bestaat uit 250 euro en een bronzen medaille. Dit is een beloning voor degenen die indrukwekkende resultaten hebben laten zien tijdens het toernooi, waarbij ze moeilijke races en sterke tegenstanders hebben overwonnen. De bronzen medaille is een symbool van doorzettingsvermogen en het behalen van hoge resultaten, die u met trots aan uw vrienden en familie kunt laten zien. Deze prijs is een bewijs van uw buitengewone inspanningen en uw streven naar overwinning.</p>
