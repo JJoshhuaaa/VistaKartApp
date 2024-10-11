@@ -64,7 +64,9 @@ CREATE TABLE prijzen (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titel VARCHAR(255) NOT NULL,
     description TEXT NOT NULL,
-    image_url VARCHAR(255) NOT NULL
+    image_url VARCHAR(255),    
+    titel_EN VARCHAR(255) NOT NULL,
+    description_EN TEXT NOT NULL
 );
 
 INSERT INTO prijzen (titel, description, image_url) VALUES 
