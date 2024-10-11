@@ -59,3 +59,15 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+CREATE TABLE prijzen (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titel VARCHAR(255) NOT NULL,
+    description TEXT NOT NULL,
+    image_url VARCHAR(255) NOT NULL
+);
+
+INSERT INTO prijzen (titel, description, image_url) VALUES 
+('De winnaar van het toernooi ontvangt', '1000 euro in contanten en de kampioensbeker.', 'img/cup.png'),
+('De tweede plaats ontvangt', '500 euro in contanten en een zilveren medaille.', 'img/2nd.jpg'),
+('De derde plaats ontvangt', '250 euro in contanten en een bronzen medaille.', 'img/3.jpg');
