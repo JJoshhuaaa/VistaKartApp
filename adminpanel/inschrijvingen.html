@@ -22,6 +22,7 @@
     </main>
 
     <template id="entry-template">
+        <span d-link="id" style="color: black;"></span>
         <span d-link="naam" style="color: red;"></span>
         <span d-link="achternaam" style="color: green;"></span>
         <span d-link="email" style="color: blue;"></span>
@@ -43,9 +44,12 @@
                 for(let item of Array.from(content.querySelectorAll('*')).filter(x => x.hasAttribute('d-link')))
                     dataLinkItems[item.getAttribute('d-link')] = item;
 
-                dataLinkItems['naam'].textContent = entry.naam;
-                dataLinkItems['achternaam'].textContent = entry.achternaam;
-                dataLinkItems['email'].textContent = entry.email;
+                for(let item of Object.entries(dataLinkItems))
+                    item[1].textContent = entry[item[0]];
+
+                // dataLinkItems['naam'].textContent = entry.naam;
+                // dataLinkItems['achternaam'].textContent = entry.achternaam;
+                // dataLinkItems['email'].textContent = entry.email;
 
                 entryElem.append(content);
                 entriesElem.append(entryElem);
