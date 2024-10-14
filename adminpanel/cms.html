@@ -1,22 +1,71 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="../css/mainstyle.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="../css/mainstyle.css" />
+    <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
     <div id="sidebar-container"></div>
     <main class="main-content">
-        <h1>CMS</h1>
+        <h1>Berichten</h1>
+
+        <!-- Column Headers -->
+        <div class="entry_columns" style="display: flex;">
+            <h2 style="flex: 1;">Naam</h2>
+            <h2 style="flex: 1;">Bericht</h2>
+            <h2 style="flex: 1;">Email</h2>
+        </div>
+
+        <div id="entries" style="display: flex; flex-direction: column;"></div>
     </main>
 
+    <template id="entry-template">
+        <div class="entry_columns" style="display: flex;">
+            <span d-link="name" style="color: red; flex: 1;"></span>
+            <span d-link="message" style="color: green; flex: 1;"></span>
+            <span d-link="email" style="color: blue; flex: 1;"></span>
+        </div>
+    </template>
+
     <script src="header.js"></script>
+    <script>
+        const templateElem = document.querySelector('template[id="entry-template"]');
+        const entriesElem = document.querySelector('div[id="entries"]');
+
+        (async () => {
+            const entries = await (
+                await fetch("rest.php?path=berichten")
+            ).json();
+
+            // Clear previous entries before appending new ones
+            entriesElem.innerHTML = '';
+
+            for (let entry of entries) {
+                const content = templateElem.content.cloneNode(true);
+
+                const dataLinkItems = {};
+                for (let item of Array.from(content.querySelectorAll("*")).filter(
+                    (x) => x.hasAttribute("d-link")
+                )) {
+                    dataLinkItems[item.getAttribute("d-link")] = item;
+                }
+
+                // Set the text content for the entry
+                dataLinkItems["name"].textContent = entry.name;
+                dataLinkItems["message"].textContent = entry.message;
+                dataLinkItems["email"].textContent = entry.email;
+
+                // Append the cloned content to the entriesElem
+                entriesElem.appendChild(content);
+            }
+        })();
+    </script>
 </body>
 </html>

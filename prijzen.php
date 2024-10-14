@@ -43,7 +43,6 @@ mysqli_close($link);
     <!--import header-footer css-->
     <link rel="stylesheet" href="header-footer/header-footer.css">
 
-    <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
     <section class="pricing-section">
         <h1>Karting Prijzen</h1>
         <div class="pricing-cards">
