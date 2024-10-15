@@ -1,3 +1,4 @@
+<?php include 'lang_index.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +26,9 @@
     <div class="center">
         <div class="frontpage-container">
             <div class="text-section">
-                <h1>HET SPANNENSTE KARTTOERNOOI</h1>
-                <p>Schrijf je nu in voor een onvergetelijke ervaring vol snelheid en competitie. Alleen de snelste wint!</p>
-                <a href="inschrijfsysteem.php" class="btn-inschrijven">Schrijf je nu in</a>
+                <h1><?php echo $lang['karttoernooi'];?></h1>
+                <p><?php echo $lang['p'];?></p>
+                <a href="inschrijfsysteem.php" class="btn-inschrijven"><?php echo $lang['inschrijven'];?></a>
 
             </div>
             <div class="image-section">

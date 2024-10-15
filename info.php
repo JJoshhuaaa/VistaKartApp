@@ -1,3 +1,4 @@
+<?php include 'lang_info.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
     <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
     <!--info-->
     <section class="info-details">
-        <h1>Informatie</h1>
+        <h1><?php echo $lang['h1'];?></h1>
         <div class="container">
             <div class="info-wrapper">
                 <div class="info-image">
@@ -32,17 +33,17 @@
                 </div>
                 <div class="info-content">
                     <div class="info-box">
-                        <h2 id="info_h2">Locatie</h2>
-                        <p>Powerarea - Mamelis 1, Lemiers Vaals. Een moderne kartbaan met uitdagende indoor en outdoor tracks.</p>
+                        <h2 id="info_h2"><?php echo $lang['locatie'];?></h2>
+                        <p><?php echo $lang['p_1'];?></p>
                     </div>
                     <div class="info-box">
-                        <h2 id="info_h2">Teams en Wedstrijden</h2>
-                        <p>Teams van 4 personen (random indeling).</p>
-                        <p>Er is een opwarmings ronde en kwalificatie ronde, daarna volgt de "Grand Prix".</p>
-                        <p>Het team met de meeste punten wint.</p>
-                        <p>Alles onder de top 10 krijgt geen punten</p>
-                        <p>ieder plek wat je omlaag gaat is 1 punt er vanaf dus:</p>
-                        <p>1ste 10 punten, 2de 9 punten etc.</p>
+                        <h2 id="info_h2"><?php echo $lang['teams_en_wedstrijden'];?></h2>
+                        <p><?php echo $lang['p_2'];?></p>
+                        <p><?php echo $lang['p_3'];?></p>
+                        <p><?php echo $lang['p_4'];?></p>
+                        <p><?php echo $lang['p_5'];?></p>
+                        <p><?php echo $lang['p_6'];?></p>
+                        <p><?php echo $lang['p_7'];?></p>
                     </div>
                 </div>
             </div>
@@ -53,35 +54,35 @@
     <!-- Nieuwe sectie: Tijdschema -->
     <section class="schedule-section">
         <div class="container">
-            <h2>Tijdschema</h2>
+            <h2><?php echo $lang['tijdschema'];?></h2>
             <table class="schedule-table">
                 <tr>
-                    <th>Tijd</th>
-                    <th>Activiteit</th>
+                    <th><?php echo $lang['th_1'];?></th>
+                    <th><?php echo $lang['th_2'];?></th>
                 </tr>
                 <tr>
                     <td>09:30 - 10:00</td>
-                    <td>Registratie & Ontvangst</td>
+                    <td><?php echo $lang['td_1'];?></td>
                 </tr>
                 <tr>
                     <td>10:00 - 11:00</td>
-                    <td>Oefensessies</td>
+                    <td><?php echo $lang['td_2'];?></td>
                 </tr>
                 <tr>
                     <td>11:00 - 12:00</td>
-                    <td>Kwalificaties</td>
+                    <td><?php echo $lang['td_3'];?></td>
                 </tr>
                 <tr>
                     <td>12:00 - 12:30</td>
-                    <td>Pauze</td>
+                    <td><?php echo $lang['td_4'];?></td>
                 </tr>
                 <tr>
                     <td>12:30 - 13:30</td>
-                    <td>Race</td>
+                    <td><?php echo $lang['td_5'];?></td>
                 </tr>
                 <tr>
                     <td>13:30 - 14:00</td>
-                    <td>Prijsuitreiking & Afsluiting</td>
+                    <td><?php echo $lang['td_6'];?></td>
                 </tr>
             </table>
         </div>
@@ -92,13 +93,13 @@
         <div class="container">
             <h2>Regels</h2>
             <ul class="rules-list">
-                <li>Volg de instructies van de baan-marshalls en blijf in de kart zitten, todat de marshall aangeeft dat je uit mag stappen. Dit geldt zowel op de kartbaan als in de pit</li>
-                <li>Gevaarlijke rijstijlen en opzettelijke botsingen zijn ten strengste verboden!</li>
-                <li>Stevig en gesloten schoeisel is verplicht (slippers en overig schoeisel zijn niet toegestaan)</li>
-                <li>Sjaals, halsdoeken en stropdassen zijn niet toegestaan tijdens het karten</li>
-                <li>Personen met lang haar moeten deze zo kort en stevig mogelijk vastmaken</li>
-                <li>Het dragen van de veiligheidsgordel en -helm is verplicht!</li>
-                <li>Bij het gebruik van een bruikleenhelm is het dragen van een balaclava verplicht</li>
+                <li><?php echo $lang['li_1'];?></li>
+                <li><?php echo $lang['li_2'];?></li>
+                <li><?php echo $lang['li_3'];?></li>
+                <li><?php echo $lang['li_4'];?></li>
+                <li><?php echo $lang['li_5'];?></li>
+                <li><?php echo $lang['li_6'];?></li>
+                <li><?php echo $lang['li_7'];?></li>
             </ul>
         </div>
     </section>
