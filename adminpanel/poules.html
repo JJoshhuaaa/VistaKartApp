@@ -29,37 +29,27 @@
                     <p style="font-size: 17.5px;user-select: none;">Tristan Koning</p>
                 </div>
             </div>
-            <div style="background-color: green;flex: 1;display: flex;padding: 2.5rem;box-sizing: border-box;flex-wrap: wrap;justify-content: center;align-items: baseline;gap: 2rem;">
-                <div style="background-color: blue;width: 300px;padding: 1rem;">
-                    <p style="text-align: center;font-size: 20px;">poule naam (1/4)</p>
-                    <div style="display: flex;flex-direction: column;gap: .5rem;margin-top: 10px;">
-                        <div style="background-color: pink;height: 25px;align-items: center;display: flex;padding: 0 4px;gap: 5px;">
-                            <div style="background-color: red;width: 25px;height: 25px">
-                                
-                            </div>
-                            <p>
-                                Tristan Koning
-                            </p>
-                        </div>
-                        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;"></div>
-                        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;"></div>
-                        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;"></div>
-                    </div>
-                </div>
-
-                <div style="background-color: blue;width: 300px;padding: 1rem;">
-                    <p style="text-align: center;font-size: 20px;">poule naam (0/4)</p>
-                    <div style="display: flex;flex-direction: column;gap: .5rem;margin-top: 10px;">
-                        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;animation: hover 2.5s forwards infinite;"></div>
-                        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;"></div>
-                        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;"></div>
-                        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;"></div>
-                    </div>
-                </div>
-
+            <div id="poule-entries" style="background-color: green;flex: 1;display: flex;padding: 2.5rem;box-sizing: border-box;flex-wrap: wrap;justify-content: center;align-items: baseline;gap: 2rem;">
             </div>
         </div>
     </main>
+
+    <template id="poule-template" style="background-color: blue;width: 300px;padding: 1rem;">
+        <p style="text-align: center;font-size: 20px;" for="naam">poule naam (0/4)</p>
+        <div style="display: flex;flex-direction: column;gap: .5rem;margin-top: 10px;" for="entry-list">
+        </div>
+    </template>
+
+    <template id="open-entry-template">
+        <div style="border: 2.5px dashed pink;height: 25px;align-items: center;display: flex;"></div>
+    </template>
+
+    <template id="consumed-entry-template">
+        <div style="background-color: pink;height: 25px;align-items: center;display: flex;padding: 0 4px;gap: 5px;">
+            <div style="background-color: red;width: 25px;height: 25px;cursor: pointer;"></div>
+            <p for="naam"></p>
+        </div>
+    </template>
 
     <script src="header.js"></script>
 </body>
@@ -70,11 +60,43 @@
     let draggingElement = null;
     let elems = document.getElementsByClassName('dragger');
 
-    (() => {
+    (async() => {
+        const openEntryTemplate = document.getElementById('open-entry-template');
+        const consumedEntryTemplate = document.getElementById('consumed-entry-template');
+
         addEventListener('mouseup', dragRelease);
         addEventListener('mousemove', mouseMove);
         for(let element of elems) {
             element.addEventListener('mousedown', dragBegin);
+        }
+        
+        const pouleEntriesElement = document.getElementById('poule-entries');
+        const pouleTemplate = document.getElementById('poule-template');
+
+        const inschrijvingen = await (await fetch('/adminpanel/rest.php?path=inschrijvingen')).json();
+        const poules = await (await fetch('/adminpanel/rest.php?path=poules')).json();
+
+        for(let poule of poules) {
+            const members = JSON.parse(poule.members);
+
+
+            let entryElem = document.createElement('div');
+            const content = pouleTemplate.content.cloneNode(true);
+            entryElem.style = pouleTemplate.getAttribute('style');
+            content.querySelector('[for="naam"]').textContent = `${poule.naam} (${members.length}/4)`;
+            const entryList = content.querySelector('[for="entry-list"');
+
+            for(let i = 0; i < 4; i++) {
+                if(members[i]) {
+                    const elem = consumedEntryTemplate.content.cloneNode(true);
+                    const inschrijving = inschrijvingen.find(x => parseInt(x.id) === members[i]);
+                    elem.querySelector('[for="naam"]').textContent = `${inschrijving.naam} ${inschrijving.achternaam}`;
+                    entryList.appendChild(elem);
+                } else entryList.appendChild(openEntryTemplate.content.cloneNode(true));
+            }
+
+            entryElem.append(content);
+            pouleEntriesElement.append(entryElem);
         }
     })();
 
