@@ -90,7 +90,7 @@ body {
     display: flex; 
     flex-direction: column; 
     justify-content: flex-start; 
-    background-color: ;
+    background-color: white;
     margin: 5% auto;
     padding: 20px;
     width: 80%;
@@ -118,19 +118,17 @@ body {
     display: block; 
     margin: 0 auto; 
 }
-.en {
-    font-size: 20px;
-    position: flex;
-    color: #EC644A;
+
+#language {
+    color: rgb(225, 91, 19);
+    padding-left: 5px;
     text-decoration: none;
-    border: none;
-}
-.nl {
-    font-size: 20px;
-    position: flex;
-    color: #EC644A;
-    text-decoration: none;
-    border: none;
+    font-weight: bold;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #f3f8f8;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
 }
 
 @media  (max-width: 768px) {

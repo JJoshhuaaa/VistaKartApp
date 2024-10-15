@@ -44,5 +44,7 @@
 
         <input type="submit" name="Submit" value="<?php echo $lang['button']; ?>" class='submit'>
     </form>
+
+    <?php include 'footer.php'; ?> 
 </body>
 </html>
