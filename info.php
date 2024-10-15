@@ -6,8 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/info.css">
     <link rel="stylesheet" href="css/mainstyle.css">
+    <link rel="stylesheet" href="css/info.css">
     <title>Info</title>
 </head>
 <body>
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="header-footer/header-footer.css">
     <!--info-->
     <section class="info-details">
+        <h1>Informatie</h1>
         <div class="container">
             <div class="info-wrapper">
                 <div class="info-image">
@@ -70,7 +71,7 @@
                 </tr>
                 <tr>
                     <td>12:00 - 12:30</td>
-                    <td>pauze</td>
+                    <td>Pauze</td>
                 </tr>
                 <tr>
                     <td>12:30 - 13:30</td>
@@ -78,7 +79,7 @@
                 </tr>
                 <tr>
                     <td>13:30 - 14:00</td>
-                    <td>prijsuitreiking & Afsluiting</td>
+                    <td>Prijsuitreiking & Afsluiting</td>
                 </tr>
             </table>
         </div>

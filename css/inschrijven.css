@@ -19,6 +19,8 @@ img {
 h2 {
     text-align: center;
     margin-top: 10px;
+    color: #333;
+    font-size: 36px;
 }
 
 label,
