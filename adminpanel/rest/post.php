@@ -18,6 +18,8 @@
 
             return;
         case 'poule_update':
+            if(count(json_decode($body->members)) > 4)
+                die(json_encode(array('error' => 'poule is filled')));
             $statement = $link->prepare('UPDATE poules SET members=? WHERE id=?');
             $statement->bind_param('si', $body->members, $body->id);
             if($statement->execute())
