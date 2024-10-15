@@ -73,3 +73,11 @@ INSERT INTO prijzen (titel, description, image_url) VALUES
 ('De winnaar van het toernooi ontvangt', '1000 euro in contanten en de kampioensbeker.', 'img/cup.png'),
 ('De tweede plaats ontvangt', '500 euro in contanten en een zilveren medaille.', 'img/2nd.jpg'),
 ('De derde plaats ontvangt', '250 euro in contanten en een bronzen medaille.', 'img/3.jpg');
+
+CREATE TABLE IF NOT EXISTS berichten (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

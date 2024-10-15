@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/mainstyle.css">
+    <script defer src="contact_switch.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -34,17 +35,16 @@
                 <p>+31 06 12 34 56 78</p>
                 <div class="ContactForm">
                     <h2>Bericht ons</h2>
-                    <form action="https://formspree.io/f/xkgwdlnp" method="POST">
+                    <form id="contactForm" action="contact_form.php" method="POST">
                         <label for="name">Name:</label>
                         <input type="text" id="name" name="name" required>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" required>
                         <label for="message">Message:</label>
                         <textarea id="message" name="message" rows="4" required></textarea>
-        
-                        <button type="submit">Stuur bericht</button>
-                    </form>
-                </div>
+                    <button type="submit">Stuur bericht</button>
+                </form>
+            </div>
             </div>
         </div>
     </section>

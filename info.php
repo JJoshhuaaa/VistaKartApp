@@ -30,11 +30,11 @@
                 </div>
                 <div class="info-content">
                     <div class="info-box">
-                        <h2>Locatie</h2>
+                        <h2 id="info_h2">Locatie</h2>
                         <p>Powerarea - Mamelis 1, Lemiers Vaals. Een moderne kartbaan met uitdagende indoor en outdoor tracks.</p>
                     </div>
                     <div class="info-box">
-                        <h2>Teams en Wedstrijden</h2>
+                        <h2 id="info_h2">Teams en Wedstrijden</h2>
                         <p>Teams van 4 personen (random indeling).</p>
                         <p>Er is een opwarmings ronde en kwalificatie ronde, daarna volgt de "Grand Prix".</p>
                         <p>Het team met de meeste punten wint.</p>
