@@ -18,10 +18,8 @@
     <div id="header-placeholder"></div>
     <script src="./header-footer/header-footer.js"></script>
     <link rel="stylesheet" href="header-footer/header-footer.css">
-    <<<<<<<<< Temporary merge branch 1
 
         <br><a href="?lang=en" id='language' class='en'>EN</a>|<a href="?lang=nl" id='language' class="nl">NL</a>
-        >>>>>>> 065609c10fe7013cb78e3485ef9511211df2f52f
         <section class="pricing-section">
             <h1><?php echo $language["heading"]; ?></h1>
 
