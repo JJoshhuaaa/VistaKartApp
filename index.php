@@ -25,7 +25,7 @@
             <div class="text-section">
                 <h1>HET SPANNENSTE KARTTOERNOOI</h1>
                 <p>Schrijf je nu in voor een onvergetelijke ervaring vol snelheid en competitie. Alleen de snelste wint!</p>
-                <a href="inschrijven.php" class="btn-inschrijven">Schrijf je nu in</a>
+                <a href="inschrijfsysteem.php" class="btn-inschrijven">Schrijf je nu in</a>
 
             </div>
             <div class="image-section">
