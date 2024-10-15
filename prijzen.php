@@ -19,7 +19,8 @@
     <script src="./header-footer/header-footer.js"></script>
     <link rel="stylesheet" href="header-footer/header-footer.css">
 
-        <br><a href="?lang=en" id='language' class='en'>EN</a>|<a href="?lang=nl" id='language' class="nl">NL</a>
+        <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
+        
         <section class="pricing-section">
             <h1><?php echo $language["heading"]; ?></h1>
 

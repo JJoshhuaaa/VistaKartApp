@@ -20,6 +20,8 @@
     <script src="./header-footer/header-footer.js"></script>
     <!--import header-footer css-->
     <link rel="stylesheet" href="header-footer/header-footer.css">
+
+    <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
     <!--info-->
     <section class="info-details">
         <h1>Informatie</h1>
