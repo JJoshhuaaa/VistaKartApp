@@ -46,7 +46,7 @@
 
     <template id="consumed-entry-template">
         <div style="background-color: pink;height: 25px;align-items: center;display: flex;padding: 0 4px;gap: 5px;">
-            <div style="background-color: red;width: 25px;height: 25px;cursor: pointer;"></div>
+            <div style="background-color: red;width: 25px;height: 25px;cursor: pointer;" for="btn-remove"></div>
             <p for="naam"></p>
         </div>
     </template>
@@ -58,6 +58,8 @@
 
 <script>
     let draggingElement = null;
+    let inschrijving = [];
+    let poules = [];
     let elems = document.getElementsByClassName('dragger');
 
     (async() => {
@@ -73,10 +75,20 @@
         const pouleEntriesElement = document.getElementById('poule-entries');
         const pouleTemplate = document.getElementById('poule-template');
 
-        const inschrijvingen = await (await fetch('/adminpanel/rest.php?path=inschrijvingen')).json();
-        const poules = await (await fetch('/adminpanel/rest.php?path=poules')).json();
+        inschrijvingen = await (await fetch('/adminpanel/rest.php?path=inschrijvingen')).json();
+        poules = await (await fetch('/adminpanel/rest.php?path=poules')).json();
 
-        for(let poule of poules) {
+        createPoules();
+
+        function createPoules() {
+            pouleEntriesElement.innerHTML = '';  
+
+            for(let poule of poules) {
+                createPoule(poule);
+            }
+        }
+
+        function createPoule(poule) {
             const members = JSON.parse(poule.members);
 
 
@@ -91,7 +103,11 @@
                     const elem = consumedEntryTemplate.content.cloneNode(true);
                     const inschrijving = inschrijvingen.find(x => parseInt(x.id) === members[i]);
                     elem.querySelector('[for="naam"]').textContent = `${inschrijving.naam} ${inschrijving.achternaam}`;
-                    entryList.appendChild(elem);
+                    elem.querySelector('[for="btn-remove"]').addEventListener('click', click => {
+                        poule.members = JSON.stringify(JSON.parse(poule.members).filter(x => parseInt(x) !== parseInt(inschrijving.id)));
+                        createPoules();
+                    });
+                    const instance = entryList.appendChild(elem);
                 } else entryList.appendChild(openEntryTemplate.content.cloneNode(true));
             }
 
@@ -114,6 +130,9 @@
     }
 
     function dragRelease(event) {
+        if(!draggingElement)
+            return;
+
         document.body.style.userSelect = null;
 
         lastMove = [];
