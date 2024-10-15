@@ -38,29 +38,6 @@
                     <img src="img/3rd.png" loading="lazy" alt="Bronzen medaille">
                     <button data-modal="modal-3"><?php echo $language["viewPrize"]; ?></button>
                 </div>
-
-    
-    <br><a href="?lang=en" class='en'>EN</a>|<a href="?lang=nl" class="nl">NL</a>
-    <section class="pricing-section">
-        <h1><?php echo $language["heading"]; ?></h1>
-        
-        <div class="pricing-cards">
-            <div class="card">
-                <h2><?php echo $language["secondPlace"]; ?></h2>
-                <img src="img/2nd.png" loading="lazy" alt="Zilveren medaille">
-                <button data-modal="modal-2"><?php echo $language["viewPrize"]; ?></button>
-
-            </div>
-            <div class="card">
-                <h2><?php echo $language["firstPlace"]; ?></h2>
-                <img src="img/1st.png" loading="lazy" alt="Champion Cup">
-                <button data-modal="modal-1"><?php echo $language["viewPrize"]; ?></button>
-            </div>
-            <div class="card">
-                <h2><?php echo $language["thirdPlace"]; ?></h2>
-                <img src="img/3rd.png" loading="lazy" alt="Bronzen medaille">
-                <button data-modal="modal-3"><?php echo $language["viewPrize"]; ?></button>
-            </div>
         </div>
     </section>
     <?php include 'footer.php'; ?> 
