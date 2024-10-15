@@ -18,7 +18,7 @@
     <!--import header-footer css-->
     <link rel="stylesheet" href="header-footer/header-footer.css">
 
-    <br><a href="?lang=en" id='language' class='en'>El</a>  |<a href="?lang=nl" id='language'>NL</a>
+    <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
               
     <form action="action_page.php" method="post">
         <img src="img/inschrijven.png" alt="avatar">
