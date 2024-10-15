@@ -128,3 +128,7 @@ h2 {
 .info-footer p {
     margin: 0;
 }
+
+#info_h2{
+    text-align: left;
+}

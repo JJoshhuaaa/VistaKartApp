@@ -29,6 +29,7 @@ mysqli_close($link);
     <link rel="stylesheet" href="css/prijzen.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script defer src="nl_en.js"></script>
     <script defer src="index.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Karting Prijzen</title>
@@ -43,6 +44,7 @@ mysqli_close($link);
     <!--import header-footer css-->
     <link rel="stylesheet" href="header-footer/header-footer.css">
 
+    <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
     <section class="pricing-section">
         <h1>Karting Prijzen</h1>
         <div class="pricing-cards">
