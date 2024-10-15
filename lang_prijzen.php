@@ -13,21 +13,8 @@ if (isset($_GET['lang'])) {
 
 
 // Define translations based on the selected language
-$translations = array(
-    'en' => array(
-        'heading' => 'Karting Prices',
-        'firstPlace' => '1st Place',
-        'secondPlace' => '2nd Place',
-        'thirdPlace' => '3rd Place',
-        'firstPrize' => 'Grand prize: 1000 euros in cash and the championship cup',
-        'firstPrizeText' => 'The winner of the tournament will receive the main prize of 1000 euros and the champion\'s cup, which symbolizes your victory and skills on the track. This cup will be a lasting memory and can be proudly displayed. In addition, the winner will have the opportunity to participate in VIP karting events in the future. The first place prize is not only a financial reward, but also a recognition of your skills and speed.',
-        'secondPrize' => 'Prize: 500 euros in cash and a silver medal',
-        'secondPrizeText' => 'The second place will receive 500 euros and a silver medal. This award is a testament to your excellent skills and your desire to compete at a high level. The silver medal is a sign that you have fought to the limit and achieved remarkable results by being among the best riders of the tournament. This award is a great confirmation of your ability and excellent form during the competition.',
-        'thirdPrize' => 'Prize: 250 euros in cash and a bronze medal',
-        'thirdPrizeText' => 'The prize for third place consists of 250 euros and a bronze medal. This is a reward for those who have shown impressive results during the tournament, overcoming difficult races and strong opponents. The bronze medal is a symbol of perseverance and achieving high results, which you can proudly show to your friends and family. This prize is a testament to your extraordinary efforts and your drive for victory.',
-        'viewPrize' => 'View Prize',
-    ),
-    'nl' => array(
+if ($language == 'nl') {
+    $lang = array(
         'heading' => 'Karting Prijzen',
         'firstPlace' => '1e plaats',
         'secondPlace' => '2e plaats',
@@ -39,11 +26,40 @@ $translations = array(
         'thirdPrize' => 'Prijs: 250 euro in contanten en een bronzen medaille',
         'thirdPrizeText' => 'De prijs voor de derde plaats bestaat uit 250 euro en een bronzen medaille. Dit is een beloning voor degenen die indrukwekkende resultaten hebben laten zien tijdens het toernooi, waarbij ze moeilijke races en sterke tegenstanders hebben overwonnen. De bronzen medaille is een symbool van doorzettingsvermogen en het behalen van hoge resultaten, die u met trots aan uw vrienden en familie kunt laten zien. Deze prijs is een bewijs van uw buitengewone inspanningen en uw streven naar overwinning.',
         'viewPrize' => 'Kijk naar de prijs',
-    )
-);
-if (isset($translations[$language])) {
-    $language = $translations[$language];
-} else {
-    $language = $translations['nl']; // Если язык не поддерживается, используем язык по умолчанию
-}
+
+                                        // footer
+         'footer_1' => 'VISTA Karting',  
+         'footer_2' => 'Inschrijven',                           
+         'footer_3' => 'Contact & Locatie',
+         'footer_4' => 'Informatie',
+         'footer_5' => 'Informatie',
+         'footer_6' => 'Prijzen',
+         'footer_7' => 'Teams',
+         'footer_8' => 'VISTAKart Corporatie',
+    );
+} else{
+    $lang = array(
+         'heading' => 'Karting Prices',
+        'firstPlace' => '1st Place',
+        'secondPlace' => '2nd Place',
+        'thirdPlace' => '3rd Place',
+        'firstPrize' => 'Grand prize: 1000 euros in cash and the championship cup',
+        'firstPrizeText' => 'The winner of the tournament will receive the main prize of 1000 euros and the champion\'s cup, which symbolizes your victory and skills on the track. This cup will be a lasting memory and can be proudly displayed. In addition, the winner will have the opportunity to participate in VIP karting events in the future. The first place prize is not only a financial reward, but also a recognition of your skills and speed.',
+        'secondPrize' => 'Prize: 500 euros in cash and a silver medal',
+        'secondPrizeText' => 'The second place will receive 500 euros and a silver medal. This award is a testament to your excellent skills and your desire to compete at a high level. The silver medal is a sign that you have fought to the limit and achieved remarkable results by being among the best riders of the tournament. This award is a great confirmation of your ability and excellent form during the competition.',
+        'thirdPrize' => 'Prize: 250 euros in cash and a bronze medal',
+        'thirdPrizeText' => 'The prize for third place consists of 250 euros and a bronze medal. This is a reward for those who have shown impressive results during the tournament, overcoming difficult races and strong opponents. The bronze medal is a symbol of perseverance and achieving high results, which you can proudly show to your friends and family. This prize is a testament to your extraordinary efforts and your drive for victory.',
+        'viewPrize' => 'View Prize',
+
+                                            // footer
+         'footer_1' => 'Vista Karting',  
+         'footer_2' => 'Register',                           
+         'footer_3' => 'Contact & Location',
+         'footer_4' => 'Information',
+         'footer_5' => 'Information',
+         'footer_6' => 'Prices',
+         'footer_7' => 'Teams',
+         'footer_8' => 'VISTAKart Corporation',   
+    );
+    }
 ?>

@@ -45,10 +45,20 @@ if ($language == 'nl') {
         'li_6' => 'Het dragen van de veiligheidsgordel en -helm is verplicht!',
         'li_7' => 'Bij het gebruik van een bruikleenhelm is het dragen van een balaclava verplicht',
 
+                                     // footer
+         'footer_1' => 'VISTA Karting',  
+         'footer_2' => 'Inschrijven',                           
+         'footer_3' => 'Contact & Locatie',
+         'footer_4' => 'Informatie',
+         'footer_5' => 'Informatie',
+         'footer_6' => 'Prijzen',
+         'footer_7' => 'Teams',
+         'footer_8' => 'VISTAKart Corporatie',
+
     );
 } else {
     $lang = array(
-                                     // Info
+                                      // Info
         'title' => 'Info',
         'h1' => 'Information',
         'locatie' => 'Location',
@@ -80,7 +90,17 @@ if ($language == 'nl') {
         'li_4' => 'Scarves, neckerchiefs, and ties are not allowed during karting',
         'li_5' => 'People with long hair must tie it up as short and securely as possible',
         'li_6' => 'Wearing the seatbelt and helmet is mandatory!',
-        'li_7' => 'When using a rental helmet, wearing a balaclava is required',                            
+        'li_7' => 'When using a rental helmet, wearing a balaclava is required',  
+        
+                                         // footer
+         'footer_1' => 'Vista Karting',  
+         'footer_2' => 'Register',                           
+         'footer_3' => 'Contact & Location',
+         'footer_4' => 'Information',
+         'footer_5' => 'Information',
+         'footer_6' => 'Prices',
+         'footer_7' => 'Teams',
+         'footer_8' => 'VISTAKart Corporation',   
         
     );
 }

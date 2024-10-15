@@ -20,6 +20,16 @@ if ($language == 'nl') {
         'invalid_email' => 'Onjuiste e-mail.',
         'email_exists' => 'Dit e-mailadres is al geregistreerd.',
         'button' => 'Inschrijven',
+
+                                     // footer
+         'footer_1' => 'VISTA Karting',  
+         'footer_2' => 'Inschrijven',                           
+         'footer_3' => 'Contact & Locatie',
+         'footer_4' => 'Informatie',
+         'footer_5' => 'Informatie',
+         'footer_6' => 'Prijzen',
+         'footer_7' => 'Teams',
+         'footer_8' => 'VISTAKart Corporatie',
     );
 } else {
     $lang = array(
@@ -32,6 +42,16 @@ if ($language == 'nl') {
         'invalid_email' => 'Invalid email.',
         'email_exists' => 'This email address is already registered.',
         'button' => 'Register',
+
+                                    // footer
+         'footer_1' => 'Vista Karting',  
+         'footer_2' => 'Register',                           
+         'footer_3' => 'Contact & Location',
+         'footer_4' => 'Information',
+         'footer_5' => 'Information',
+         'footer_6' => 'Prices',
+         'footer_7' => 'Teams',
+         'footer_8' => 'VISTAKart Corporation',                        
     );
 }
 ?>

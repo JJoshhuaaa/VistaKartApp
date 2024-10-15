@@ -16,21 +16,21 @@
         <div class="footer_content">
             <div class="footer_content_column">
                 <div class="footer_content_column_text">
-                    <h3>VISTA Karting</h3>
+                    <h3><?php echo $lang['footer_1'];?></h3>
                     <ul>
-                        <li><a href="Aanmelden.php">Aanmelden</a></li>
-                        <li><a href="contact.php">Contact & Locatie</a></li>
+                        <li><a href="inschrijfsysteem.php"><?php echo $lang['footer_2'];?></a></li>
+                        <li><a href="contact.php"><?php echo $lang['footer_3'];?></a></li>
                     </ul>
                 </div>
             </div>
     
             <div class="footer_content_column">
                 <div class="footer_content_column_text">
-                    <h3>Informatie</h3>
+                    <h3><?php echo $lang['footer_4'];?></h3>
                     <ul>
-                        <li><a href="Info.php">Informatie</a></li>
-                        <li><a href="prijzen.php">Prijzen</a></li>
-                        <li><a href="teams.php">Teams</a></li>
+                        <li><a href="Info.php"><?php echo $lang['footer_5'];?></a></li>
+                        <li><a href="prijzen.php"><?php echo $lang['footer_6'];?></a></li>
+                        <li><a href="teams.php"><?php echo $lang['footer_7'];?></a></li>
                     </ul>
                 </div>
             </div>
@@ -92,7 +92,7 @@
         </div>
     
         <div class="footer_bottom">
-            <p class="timestamp">© 2024<br>VISTAKart Corporatie</p>
+            <p class="timestamp">© 2024<br><?php echo $lang['footer_8'];?></p>
         </div>
     </footer>
     

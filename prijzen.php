@@ -20,23 +20,23 @@
         <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
         
         <section class="pricing-section">
-            <h1><?php echo $language["heading"]; ?></h1>
+            <h1><?php echo $lang["heading"]; ?></h1>
 
             <div class="pricing-cards">
                 <div class="card">
-                    <h2><?php echo $language["secondPlace"]; ?></h2>
+                    <h2><?php echo $lang["secondPlace"]; ?></h2>
                     <img src="img/2nd.png" loading="lazy" alt="Zilveren medaille">
-                    <button data-modal="modal-2"><?php echo $language["viewPrize"]; ?></button>
+                    <button data-modal="modal-2"><?php echo $lang["viewPrize"]; ?></button>
                 </div>
                 <div class="card">
-                    <h2><?php echo $language["firstPlace"]; ?></h2>
+                    <h2><?php echo $lang["firstPlace"]; ?></h2>
                     <img src="img/1st.png" loading="lazy" alt="Champion Cup">
-                    <button data-modal="modal-1"><?php echo $language["viewPrize"]; ?></button>
+                    <button data-modal="modal-1"><?php echo $lang["viewPrize"]; ?></button>
                 </div>
                 <div class="card">
-                    <h2><?php echo $language["thirdPlace"]; ?></h2>
+                    <h2><?php echo $lang["thirdPlace"]; ?></h2>
                     <img src="img/3rd.png" loading="lazy" alt="Bronzen medaille">
-                    <button data-modal="modal-3"><?php echo $language["viewPrize"]; ?></button>
+                    <button data-modal="modal-3"><?php echo $lang["viewPrize"]; ?></button>
                 </div>
         </div>
     </section>
@@ -47,8 +47,8 @@
         <div class="modal-content">
             <span class="close" data-modal="modal-1">&times;</span>
             <img src="img/1.png" loading="lazy" alt="">
-            <h2><?php echo $language["firstPrize"]; ?></h2>
-            <p><?php echo $language["firstPrizeText"]; ?></p>
+            <h2><?php echo $lang["firstPrize"]; ?></h2>
+            <p><?php echo $lang["firstPrizeText"]; ?></p>
         </div>
     </div>
     
@@ -56,8 +56,8 @@
         <div class="modal-content">
             <span class="close" data-modal="modal-2">&times;</span>
             <img src="img/2.png" loading="lazy" alt="">
-            <h2><?php echo $language["secondPrize"]; ?></h2>
-            <p><?php echo $language["secondPrizeText"]; ?></p>
+            <h2><?php echo $lan["secondPrize"]; ?></h2>
+            <p><?php echo $lang["secondPrizeText"]; ?></p>
         </div>
     </div>
     
@@ -65,8 +65,8 @@
         <div class="modal-content">
             <span class="close" data-modal="modal-3">&times;</span>
             <img src="img/3.png" loading="lazy" alt="">
-            <h2><?php echo $language["thirdPrize"]; ?></h2>
-            <p><?php echo $language["thirdPrizeText"]; ?></p>
+            <h2><?php echo $lang["thirdPrize"]; ?></h2>
+            <p><?php echo $lang["thirdPrizeText"]; ?></p>
         </div>
     </div>
 </body>
