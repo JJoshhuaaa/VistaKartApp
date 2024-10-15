@@ -1,3 +1,4 @@
+<?php include 'lang_info.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
     <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
     <!--info-->
     <section class="info-details">
-        <h1>Informatie</h1>
+        <h1><?php echo $lang['h1'];?></h1>
         <div class="container">
             <div class="info-wrapper">
                 <div class="info-image">
@@ -32,17 +33,17 @@
                 </div>
                 <div class="info-content">
                     <div class="info-box">
-                        <h2 id="info_h2">Locatie</h2>
-                        <p>Powerarea - Mamelis 1, Lemiers Vaals. Een moderne kartbaan met uitdagende indoor en outdoor tracks.</p>
+                        <h2 id="info_h2"><?php echo $lang['locatie'];?></h2>
+                        <p><?php echo $lang['p_1'];?></p>
                     </div>
                     <div class="info-box">
-                        <h2 id="info_h2">Teams en Wedstrijden</h2>
-                        <p>Teams van 4 personen (random indeling).</p>
-                        <p>Er is een opwarmings ronde en kwalificatie ronde, daarna volgt de "Grand Prix".</p>
-                        <p>Het team met de meeste punten wint.</p>
-                        <p>Alles onder de top 10 krijgt geen punten</p>
-                        <p>ieder plek wat je omlaag gaat is 1 punt er vanaf dus:</p>
-                        <p>1ste 10 punten, 2de 9 punten etc.</p>
+                        <h2 id="info_h2"><?php echo $lang['teams_en_wedstrijden'];?></h2>
+                        <p><?php echo $lang['p_2'];?></p>
+                        <p><?php echo $lang['p_3'];?></p>
+                        <p><?php echo $lang['p_4'];?></p>
+                        <p><?php echo $lang['p_5'];?></p>
+                        <p><?php echo $lang['p_6'];?></p>
+                        <p><?php echo $lang['p_7'];?></p>
                     </div>
                 </div>
             </div>
