@@ -55,11 +55,9 @@ CREATE TABLE `leerlingen` (
 --
 
 CREATE TABLE pouling_indeling (
-  'poule_id' INT AUTO_INCREMENT PRIMARY KEY,
-  "poule_nummer" INT NOT NULL,
-  "leerling_id" INT,
-  "creatiedatum" DATETIME DEFAULT CURRENT_TIMESTAMP,
-  status ENUM('actief', 'inactief') DEFAULT 'actief',
-  FOREIGN KEY (leerling_id) REFERENCES leerlingen(id)
+  `poule_id` INT AUTO_INCREMENT PRIMARY KEY,
+  `poule_nummer` INT NOT NULL,
+  `leerling_id` INT,
+  FOREIGN KEY (`leerling_id`) REFERENCES `leerlingen`(`id`)
 );
--- --------------------------------------------------------
+

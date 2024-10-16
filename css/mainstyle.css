@@ -12,4 +12,11 @@
     box-sizing: border-box;
 }
 
-
+#language {
+    color: rgb(225, 91, 19);
+    padding: 0 5px 0 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid rgb(0, 0, 0);
+    margin-left: 10px;
+}

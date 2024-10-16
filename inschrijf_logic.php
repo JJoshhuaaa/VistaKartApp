@@ -1,5 +1,6 @@
 <?php
-include 'database/config.php'; // Zorg ervoor dat je 'config.php' de juiste databaseverbinding heeft
+include 'database/config.php';
+include 'poule_logic.php'; // Zorg ervoor dat je 'config.php' de juiste databaseverbinding heeft
 
 $error_message = "";
 

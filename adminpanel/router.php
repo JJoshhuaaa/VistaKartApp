@@ -30,7 +30,6 @@ if(empty($rel_path))
 if(!file_exists($rel_path) || $rel_path === 'router.php' || str_starts_with($rel_path, 'rest/'))
 {
     header('HTTP/1.0 404 Not found');
-    include_once '404.html';
 }
 else {
     header('Content-Type: ' . resolve_content_type_ext($rel_path));

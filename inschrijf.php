@@ -1,4 +1,7 @@
-<?php include 'languageHandler.php'?>
+<?php 
+include 'languageHandler.php';
+include 'poule_logic.php';
+?>
 <!DOCTYPE html>
 <html lang="nl"> 
 <head>
@@ -17,7 +20,7 @@
     <script src="./languageCookieHandler.js"></script>
     <br><a onclick='setLanguageCookie("en")' id='language' class='en'>EN</a>  |<a onclick='setLanguageCookie("nl")' id='language'>NL</a>
               
-    <form action="action_page.php" method="post">
+    <form action="inschrijf_logic.php" method="post">
         <img src="img/inschrijven.png" alt="avatar">
         <h2><?php echo $languagePackPage['form_title']; ?></h2>
 
