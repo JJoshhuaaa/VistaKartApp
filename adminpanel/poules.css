@@ -70,6 +70,8 @@
     width: 300px;
     padding: 1rem;
     position: relative;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .poule .delete-btn {
@@ -78,6 +80,13 @@
     right: 0;
     padding: 4px;
     cursor: pointer;
+
+    background-color: #EC644A;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
 .poule .entries {
