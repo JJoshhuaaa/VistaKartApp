@@ -125,13 +125,14 @@
 }
 
 #poule-entries {
-    background-color: white;
+    border: 1px #00555C solid;
+    background-color: whitesmoke;
     flex: 1;
     display: flex;
     padding: 2.5rem;
     box-sizing: border-box;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: baseline;
     gap: 2rem;
 }
