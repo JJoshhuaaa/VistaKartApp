@@ -19,7 +19,7 @@ if ($language == 'nl') {
         'submit' => 'Inschrijven',
         'invalid_email' => 'Onjuiste e-mail.',
         'email_exists' => 'Dit e-mailadres is al geregistreerd.',
-        'button' => 'Inschrijven',
+        'button' => 'submit',
 
                                      // footer
          'footer_1' => 'VISTA Karting',  

@@ -18,6 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '516872@vistacollege.nl',
         '510586@vistacollege.nl',
         '92015@vistacollege.nl',
+        'rana.mardikhi@gmail.com',
     ];
 
     if (!in_array($email, $allowed_emails)) {
@@ -40,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Uitvoeren van de query en controleren op succes
         if (mysqli_query($link, $sql)) {
             // Registratie geslaagd, redirect naar prijzenpagina
-            header("Location: prijzen.html");
+            header("Location: prijzen.php");
             exit();
         } else {
             echo "Er is iets misgegaan: " . mysqli_error($link);
