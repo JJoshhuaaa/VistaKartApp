@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         '517255@vistacollege.nl',
         '516872@vistacollege.nl',
         '510586@vistacollege.nl',
-        '92015@vistacollege.nl'
+        '92015@vistacollege.nl',
     ];
 
     if (!in_array($email, $allowed_emails)) {
