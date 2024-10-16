@@ -22,12 +22,14 @@
     </main>
 
     <template id="entry-template">
-        <h2>Naam</h2>
+        <!-- <h2>Naam</h2>
         <span d-link="naam" style="color: red;"></span>
         <h2>Achternaam</h2>
         <span d-link="achternaam" style="color: green;"></span>
         <h2>Email</h2>
-        <span d-link="email" style="color: blue;"></span>
+        <span d-link="email" style="color: blue;"></span> -->
+
+        <span d-variables="email,naam,achternaam,id">mijn email is %s en mijn naam is %s %s. Mijn ID is %</span>
     </template>
 
     <script src="header.js"></script>
@@ -41,14 +43,49 @@
             {
                 let entryElem = document.createElement('div');
                 const content = templateElem.content.cloneNode(true);
+                
+                for(let item of Array.from(content.querySelectorAll('*')).filter(x => x.hasAttribute('d-variables'))) {
+                    let queue = [];
+                    
+                    for(let variable of item.getAttribute('d-variables').split(','))
+                        queue.push(entry[variable]);
 
-                const dataLinkItems = {};
-                for(let item of Array.from(content.querySelectorAll('*')).filter(x => x.hasAttribute('d-link')))
-                    dataLinkItems[item.getAttribute('d-link')] = item;
+                    let output = '';
+                    let formating = false
 
-                dataLinkItems['naam'].textContent = entry.naam;
-                dataLinkItems['achternaam'].textContent = entry.achternaam;
-                dataLinkItems['email'].textContent = entry.email;
+                    let queueIndex = 0;
+                    let i = 0;
+                    while(i < item.textContent.length) {
+                        try {
+                            const character = item.textContent[i];
+                            if(character === '%') {
+                                formating = true;
+                                continue;
+                            }
+                            
+                            if(formating) {
+                                formating = false;
+                                const data = queue[queueIndex++];
+                                switch(character) {
+                                    case 's':
+                                        output += String(data);
+                                        break;
+                                    case 'i':
+                                        output += parseInt(data);
+                                        break;
+                                    case 'f':
+                                        output += parseFloat(data).toFixed(2);
+                                        break;
+                                }
+                            } else output += character;
+                        }
+                        finally {
+                            i++;
+                        }
+                    }
+
+                    item.textContent = output;
+                }
 
                 entryElem.append(content);
                 entriesElem.append(entryElem);

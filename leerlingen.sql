@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 08, 2024 at 12:25 PM
+-- Generation Time: Oct 16, 2024 at 11:21 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -24,6 +24,20 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `berichten`
+--
+
+CREATE TABLE `berichten` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `leerlingen`
 --
 
@@ -34,9 +48,51 @@ CREATE TABLE `leerlingen` (
   `email` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `poules`
+--
+
+CREATE TABLE `poules` (
+  `id` int(11) NOT NULL,
+  `naam` text NOT NULL,
+  `members` text NOT NULL DEFAULT '[]'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prijzen`
+--
+
+CREATE TABLE `prijzen` (
+  `id` int(11) NOT NULL,
+  `titel` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
+  `titel_EN` varchar(255) NOT NULL,
+  `description_EN` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `prijzen`
+--
+
+INSERT INTO `prijzen` (`id`, `titel`, `description`, `image_url`, `titel_EN`, `description_EN`) VALUES
+(1, 'De winnaar van het toernooi ontvangt', '1000 euro in contanten en de kampioensbeker.', 'img/cup.png', '', ''),
+(2, 'De tweede plaats ontvangt', '500 euro in contanten en een zilveren medaille.', 'img/2nd.jpg', '', ''),
+(3, 'De derde plaats ontvangt', '250 euro in contanten en een bronzen medaille.', 'img/3.jpg', '', '');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `berichten`
+--
+ALTER TABLE `berichten`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `leerlingen`
@@ -46,38 +102,46 @@ ALTER TABLE `leerlingen`
   ADD UNIQUE KEY `id` (`id`);
 
 --
+-- Indexes for table `poules`
+--
+ALTER TABLE `poules`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `prijzen`
+--
+ALTER TABLE `prijzen`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `berichten`
+--
+ALTER TABLE `berichten`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `leerlingen`
 --
 ALTER TABLE `leerlingen`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `poules`
+--
+ALTER TABLE `poules`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `prijzen`
+--
+ALTER TABLE `prijzen`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-CREATE TABLE prijzen (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    titel VARCHAR(255) NOT NULL,
-    description TEXT NOT NULL,
-    image_url VARCHAR(255),    
-    titel_EN VARCHAR(255) NOT NULL,
-    description_EN TEXT NOT NULL
-);
-
-INSERT INTO prijzen (titel, description, image_url) VALUES 
-('De winnaar van het toernooi ontvangt', '1000 euro in contanten en de kampioensbeker.', 'img/cup.png'),
-('De tweede plaats ontvangt', '500 euro in contanten en een zilveren medaille.', 'img/2nd.jpg'),
-('De derde plaats ontvangt', '250 euro in contanten en een bronzen medaille.', 'img/3.jpg');
-
-CREATE TABLE IF NOT EXISTS berichten (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(255) NOT NULL,
-    message TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
