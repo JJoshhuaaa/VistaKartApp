@@ -204,7 +204,7 @@
         "contact" : {
             "title" : "Contact",
             "form_title" : "Contact",
-            "contactinfo" : "ContactInfo",
+            "contactinfo" : "Contact Info",
             "stuur_email" : "Stuur een mail:",
             "bel_ons" : "Bel ons:",
             "bericht_ons" : "Bericht Ons",
