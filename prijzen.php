@@ -1,4 +1,4 @@
-<?php include 'lang_prijzen.php'; ?>
+<?php include 'languageHandler.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,43 +12,44 @@
     <title>Karting Prijzen</title>
 </head>
 <body>
-    <div id="preloader"></div>
-    <div id="header-placeholder"></div>
-    <script src="./header-footer/header-footer.js"></script>
-    <link rel="stylesheet" href="header-footer/header-footer.css">
+    <!--import header css-->
+    <link rel="stylesheet" href="header-footer/header.css">
 
-        <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
+    <?php include './header-footer/header.php'?>
+
+    <script src="./languageCookieHandler.js"></script>
+    <br><a onclick='setLanguageCookie("en")' id='language' class='en'>EN</a>  |<a onclick='setLanguageCookie("nl")' id='language'>NL</a>
         
         <section class="pricing-section">
-            <h1><?php echo $lang["heading"]; ?></h1>
+            <h1><?php echo $languagePackPage["heading"]; ?></h1>
 
             <div class="pricing-cards">
                 <div class="card">
-                    <h2><?php echo $lang["secondPlace"]; ?></h2>
+                    <h2><?php echo $languagePackPage["secondPlace"]; ?></h2>
                     <img src="img/2nd.png" loading="lazy" alt="Zilveren medaille">
-                    <button data-modal="modal-2"><?php echo $lang["viewPrize"]; ?></button>
+                    <button data-modal="modal-2"><?php echo $languagePackPage["viewPrize"]; ?></button>
                 </div>
                 <div class="card">
-                    <h2><?php echo $lang["firstPlace"]; ?></h2>
+                    <h2><?php echo $languagePackPage["firstPlace"]; ?></h2>
                     <img src="img/1st.png" loading="lazy" alt="Champion Cup">
-                    <button data-modal="modal-1"><?php echo $lang["viewPrize"]; ?></button>
+                    <button data-modal="modal-1"><?php echo $languagePackPage["viewPrize"]; ?></button>
                 </div>
                 <div class="card">
-                    <h2><?php echo $lang["thirdPlace"]; ?></h2>
+                    <h2><?php echo $languagePackPage["thirdPlace"]; ?></h2>
                     <img src="img/3rd.png" loading="lazy" alt="Bronzen medaille">
-                    <button data-modal="modal-3"><?php echo $lang["viewPrize"]; ?></button>
+                    <button data-modal="modal-3"><?php echo $languagePackPage["viewPrize"]; ?></button>
                 </div>
         </div>
     </section>
-    <?php include 'footer.php'; ?> 
+    <?php include 'header-footer/footer.php'; ?> 
 
     <!-- Модальные окна для призов -->
     <div id="modal-1" class="modal">
         <div class="modal-content">
             <span class="close" data-modal="modal-1">&times;</span>
             <img src="img/1.png" loading="lazy" alt="">
-            <h2><?php echo $lang["firstPrize"]; ?></h2>
-            <p><?php echo $lang["firstPrizeText"]; ?></p>
+            <h2><?php echo $languagePackPage["firstPrize"]; ?></h2>
+            <p><?php echo $languagePackPage["firstPrizeText"]; ?></p>
         </div>
     </div>
     
@@ -56,8 +57,8 @@
         <div class="modal-content">
             <span class="close" data-modal="modal-2">&times;</span>
             <img src="img/2.png" loading="lazy" alt="">
-            <h2><?php echo $lan["secondPrize"]; ?></h2>
-            <p><?php echo $lang["secondPrizeText"]; ?></p>
+            <h2><?php echo $languagePackPage["secondPrize"]; ?></h2>
+            <p><?php echo $languagePackPage["secondPrizeText"]; ?></p>
         </div>
     </div>
     
@@ -65,8 +66,8 @@
         <div class="modal-content">
             <span class="close" data-modal="modal-3">&times;</span>
             <img src="img/3.png" loading="lazy" alt="">
-            <h2><?php echo $lang["thirdPrize"]; ?></h2>
-            <p><?php echo $lang["thirdPrizeText"]; ?></p>
+            <h2><?php echo $languagePackPage["thirdPrize"]; ?></h2>
+            <p><?php echo $languagePackPage["thirdPrizeText"]; ?></p>
         </div>
     </div>
 </body>

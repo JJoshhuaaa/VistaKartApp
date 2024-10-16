@@ -1,4 +1,4 @@
-<?php include 'lang_index.php'?>
+<?php include 'languageHandler.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,23 +12,20 @@
     <title>VISTA Kart App</title>
 </head>
 <body>
-    <!--preload de plek voor de header-->
-    <div id="preloader"></div>
-    <!--hij laat de header dynamisch in-->
-    <div id="header-placeholder"></div>
-    <!--import header-footer js-->
-    <script src="./header-footer/header-footer.js"></script>
-    <!--import header-footer css-->
-    <link rel="stylesheet" href="header-footer/header-footer.css">
+    <!--import header css-->
+    <link rel="stylesheet" href="header-footer/header.css">
 
-    <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
+    <?php include './header-footer/header.php'?>
+
+    <script src="./languageCookieHandler.js"></script>
+    <br><a onclick='setLanguageCookie("en")' id='language' class='en'>EN</a>  |<a onclick='setLanguageCookie("nl")' id='language'>NL</a>
 
     <div class="center">
         <div class="frontpage-container">
             <div class="text-section">
-                <h1><?php echo $lang['karttoernooi'];?></h1>
-                <p><?php echo $lang['p'];?></p>
-                <a href="inschrijfsysteem.php" class="btn-inschrijven"><?php echo $lang['inschrijven'];?></a>
+                <h1><?php echo $languagePackPage['karttoernooi'];?></h1>
+                <p><?php echo $languagePackPage['p'];?></p>
+                <a href="inschrijfsysteem.php" class="btn-inschrijven"><?php echo $languagePackPage['inschrijven'];?></a>
 
             </div>
             <div class="image-section">
@@ -36,6 +33,6 @@
             </div>
         </div>
     </div>
-    <?php include 'footer.php'; ?> 
+    <?php include 'header-footer/footer.php'; ?> 
 </body>
 </html>

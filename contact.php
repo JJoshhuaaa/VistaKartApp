@@ -1,4 +1,4 @@
-<?php include 'lang_contact.php'?>
+<?php include 'languageHandler.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,44 +15,41 @@
 
 
 <body>
-    <!--preload de plek voor de header-->
-    <div id="preloader"></div>
-    <!--hij laat de header dynamisch in-->
-    <div id="header-placeholder"></div>
-    <!--import header-footer js-->
-    <script src="./header-footer/header-footer.js"></script>
-    <!--import header-footer css-->
-    <link rel="stylesheet" href="header-footer/header-footer.css">
+    <!--import header css-->
+    <link rel="stylesheet" href="header-footer/header.css">
 
-    <br><a href="?lang=en" id='language' class='en'>EN</a>  |<a href="?lang=nl" id='language'>NL</a>
+    <?php include './header-footer/header.php'?>
+
+    <script src="./languageCookieHandler.js"></script>
+    <br><a onclick='setLanguageCookie("en")' id='language' class='en'>EN</a>  |<a onclick='setLanguageCookie("nl")' id='language'>NL</a>
 
     <section class="contact-section">
-        <h1><?php echo $lang['form_title']; ?></h1>
+        <h1><?php echo $languagePackPage['form_title']; ?></h1>
         <div class="section-card">
             <div class="card">
                 <img src="img/powerarea2.png" alt="--race photo">
-                <h2><?php echo $lang['contactinfo'];?></h2>
-                <p class="GegevensAlinea"><?php echo $lang['stuur_email'];?></p>
+                <h2><?php echo $languagePackPage['contactinfo'];?></h2>
+                <p class="GegevensAlinea"><?php echo $languagePackPage['stuur_email'];?></p>
                 <p><a href="mailto:516872@vistacollege.nl">516872@vistacollege.nl</a></p>
-                <p class="GegevensAlinea"><?php echo $lang['bel_ons'];?></p>
+                <p class="GegevensAlinea"><?php echo $languagePackPage['bel_ons'];?></p>
                 <p>+31 06 12 34 56 78</p>
                 <div class="ContactForm">
-                    <h2><?php echo $lang['bericht_ons'];?></h2>
-                    <form id="contactForm" action="contact_form.php" method="POST">
-                        <label for="name"><?php echo $lang['naam'];?></label>
+                    <h2><?php echo $languagePackPage['bericht_ons'];?></h2>
+                    <form id="contactForm" action="contact_logic.php" method="POST">
+                        <label for="name"><?php echo $languagePackPage['naam'];?></label>
                         <input type="text" id="name" name="name" required>
-                        <label for="email"><?php echo $lang['email'];?></label>
+                        <label for="email"><?php echo $languagePackPage['email'];?></label>
                         <input type="email" id="email" name="email" required>
-                        <label for="message"><?php echo $lang['bericht'];?></label>
+                        <label for="message"><?php echo $languagePackPage['bericht'];?></label>
                         <textarea id="message" name="message" rows="4" required></textarea>
-                    <button type="submit"><?php echo $lang['stuur_bericht'];?></button>
+                    <button type="submit"><?php echo $languagePackPage['stuur_bericht'];?></button>
                 </form>
             </div>
             </div>
         </div>
     </section>
     
-    <?php include 'footer.php'; ?> 
+    <?php include 'header-footer/footer.php'; ?> 
 
 </body>
 </html>

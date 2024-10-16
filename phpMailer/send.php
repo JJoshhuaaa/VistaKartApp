@@ -1,14 +1,13 @@
 <?php
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
+require './Exception.php';
+require './PHPMailer.php';
+require './SMTP.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-if(isset($_POST['submit'])){
-    $email = $_POST['email'];
+if(TRUE){
 
     //Create an instance; passing `true` enables exceptions
     $mail = new PHPMailer(true);

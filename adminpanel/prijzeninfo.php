@@ -1,20 +1,20 @@
 <?php
 // update.php
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['newInfo'])) {
-    // Load the existing data
-    $data = json_decode(file_get_contents('data.json'), true);
-
-    // Update the info value
-    $data['info'] = $_POST['newInfo'];
-
-    // Save the updated data back to the JSON file
-    file_put_contents('data.json', json_encode($data));
-
-    echo "Info updated successfully!";
-} else {
+if (!$_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['newInfo'])) {
     echo "No data to update.";
+    exit();
 }
+// Load the existing data
+$data = json_decode(file_get_contents('data.json'), true);
+
+// Update the info value
+$data['info'] = $_POST['newInfo'];
+
+// Save the updated data back to the JSON file
+file_put_contents('data.json', json_encode($data));
+
+echo "Info updated successfully!";
 ?>
 
 <!DOCTYPE html>

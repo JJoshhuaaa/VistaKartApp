@@ -37,50 +37,43 @@
         const templateElem = document.querySelector('template[id="entry-template"]');
         const entriesElem = document.querySelector('div[id="entries"]');
 
-        (async() => {
+        (async () => {
             const entries = await (await fetch('rest.php?path=inschrijvingen')).json();
-            for(let entry of entries)
-            {
+            
+            for (let entry of entries) {
                 let entryElem = document.createElement('div');
                 const content = templateElem.content.cloneNode(true);
+                const items = Array.from(content.querySelectorAll('*')).filter(x => x.hasAttribute('d-variables'));
                 
-                for(let item of Array.from(content.querySelectorAll('*')).filter(x => x.hasAttribute('d-variables'))) {
-                    let queue = [];
-                    
-                    for(let variable of item.getAttribute('d-variables').split(','))
-                        queue.push(entry[variable]);
-
+                for (let item of items) {
+                    let queue = item.getAttribute('d-variables').split(',').map(variable => entry[variable]);
                     let output = '';
-                    let formating = false
-
+                    let formating = false;
                     let queueIndex = 0;
-                    let i = 0;
-                    while(i < item.textContent.length) {
-                        try {
-                            const character = item.textContent[i];
-                            if(character === '%') {
-                                formating = true;
-                                continue;
-                            }
-                            
-                            if(formating) {
-                                formating = false;
-                                const data = queue[queueIndex++];
-                                switch(character) {
-                                    case 's':
-                                        output += String(data);
-                                        break;
-                                    case 'i':
-                                        output += parseInt(data);
-                                        break;
-                                    case 'f':
-                                        output += parseFloat(data).toFixed(2);
-                                        break;
-                                }
-                            } else output += character;
+
+                    for (let i = 0; i < item.textContent.length; i++) {
+                        const character = item.textContent[i];
+
+                        if (character === '%') {
+                            formating = true;
+                            continue;
                         }
-                        finally {
-                            i++;
+
+                        if (!formating) output += character;
+
+                        formating = false;
+                        const data = queue[queueIndex++];
+
+                        switch (character) {
+                            case 's':
+                                output += String(data);
+                                break;
+                            case 'i':
+                                output += parseInt(data);
+                                break;
+                            case 'f':
+                                output += parseFloat(data).toFixed(2);
+                                break;
                         }
                     }
 
