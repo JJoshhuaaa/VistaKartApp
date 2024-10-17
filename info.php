@@ -1,4 +1,4 @@
-<?php include 'languageHandler.php'?>
+<?php include './handlers/languageHandler.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/mainstyle.css">
-    <link rel="stylesheet" href="css/info.css">
+    <link rel="stylesheet" href="./css/mainstyle.css">
+    <link rel="stylesheet" href="./css/info.css">
     <title>Info</title>
 </head>
 <body>
@@ -16,9 +16,6 @@
     <link rel="stylesheet" href="header-footer/header.css">
 
     <?php include './header-footer/header.php'?>
-
-    <script src="./languageCookieHandler.js"></script>
-    <br><a onclick='setLanguageCookie("en")' id='language' class='en'>EN</a>  |<a onclick='setLanguageCookie("nl")' id='language'>NL</a>
     <!--info-->
     <section class="info-details">
         <h1><?php echo $languagePackPage['h1'];?></h1>
@@ -35,11 +32,6 @@
                     <div class="info-box">
                         <h2 id="info_h2"><?php echo $languagePackPage['teams_en_wedstrijden'];?></h2>
                         <p><?php echo $languagePackPage['p_2'];?></p>
-                        <p><?php echo $languagePackPage['p_3'];?></p>
-                        <p><?php echo $languagePackPage['p_4'];?></p>
-                        <p><?php echo $languagePackPage['p_5'];?></p>
-                        <p><?php echo $languagePackPage['p_6'];?></p>
-                        <p><?php echo $languagePackPage['p_7'];?></p>
                     </div>
                 </div>
             </div>

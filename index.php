@@ -1,4 +1,4 @@
-<?php include 'languageHandler.php'?>
+<?php include './handlers/languageHandler.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,15 +17,12 @@
 
     <?php include './header-footer/header.php'?>
 
-    <script src="./languageCookieHandler.js"></script>
-    <br><a onclick='setLanguageCookie("en")' id='language' class='en'>EN</a>  |<a onclick='setLanguageCookie("nl")' id='language'>NL</a>
-
     <div class="center">
         <div class="frontpage-container">
             <div class="text-section">
                 <h1><?php echo $languagePackPage['karttoernooi'];?></h1>
                 <p><?php echo $languagePackPage['p'];?></p>
-                <a href="inschrijfsysteem.php" class="btn-inschrijven"><?php echo $languagePackPage['inschrijven'];?></a>
+                <a href="inschrijf.php" class="btn-inschrijven"><?php echo $languagePackPage['inschrijven'];?></a>
 
             </div>
             <div class="image-section">

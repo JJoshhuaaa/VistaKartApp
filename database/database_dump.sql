@@ -42,10 +42,10 @@ CREATE TABLE `berichten` (
 --
 
 CREATE TABLE `leerlingen` (
-  `id` int(5) NOT NULL,
-  `naam` varchar(25) NOT NULL,
+  `id` int(255) NOT NULL,
+  `naam` varchar(255) NOT NULL,
   `achternaam` text NOT NULL,
-  `email` varchar(25) NOT NULL
+  `email` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -54,10 +54,10 @@ CREATE TABLE `leerlingen` (
 -- Table structure for table `poules`
 --
 
-CREATE TABLE pouling_indeling (
+CREATE TABLE poule (
   `poule_id` INT AUTO_INCREMENT PRIMARY KEY,
-  `poule_nummer` INT NOT NULL,
   `leerling_id` INT,
+  `is_winner` BOOLEAN, DEFAULT FALSE
   FOREIGN KEY (`leerling_id`) REFERENCES `leerlingen`(`id`)
 );
 

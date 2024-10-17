@@ -1,4 +1,4 @@
-<?php include 'languageHandler.php'?>
+<?php include './handlers/languageHandler.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +20,6 @@
 
     <?php include './header-footer/header.php'?>
 
-    <script src="./languageCookieHandler.js"></script>
-    <br><a onclick='setLanguageCookie("en")' id='language' class='en'>EN</a>  |<a onclick='setLanguageCookie("nl")' id='language'>NL</a>
-
     <section class="contact-section">
         <h1><?php echo $languagePackPage['form_title']; ?></h1>
         <div class="section-card">
@@ -35,7 +32,7 @@
                 <p>+31 06 12 34 56 78</p>
                 <div class="ContactForm">
                     <h2><?php echo $languagePackPage['bericht_ons'];?></h2>
-                    <form id="contactForm" action="contact_logic.php" method="POST">
+                    <form id="contactForm" action="./handlers/contactHandler.php" method="POST">
                         <label for="name"><?php echo $languagePackPage['naam'];?></label>
                         <input type="text" id="name" name="name" required>
                         <label for="email"><?php echo $languagePackPage['email'];?></label>

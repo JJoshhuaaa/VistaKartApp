@@ -6,6 +6,14 @@
             "p": "ᑑᑗᐤ ᑑᑫᑙᑌᐤ ᜲᐦᒣᐤᒡᐜᐤ",
             "inschrijven": "ᔅᐲᐦ ᑖᑒ"
         },
+        "teams" : 
+        {
+            "team_search_placeholder" : "ᑳᑂ ᐇᑴᐗᐭᒡᐤ ᑗᑖ...",
+            "teammember_plate" : "ᛃᐸᑖ ᐍ ",
+            "winner_plate" : "ᑑᑗᐤ ᑖᑪᑖᓒ",
+            "on_plate" : "ᐯᑊ",
+            "teams_plate" : "ᑘᑠᑛᒢᑝ"
+        },
         "prijzen": {
             "heading": "ᑑᓋᓰᐦᐄᑵ ᜟᒡᐠ",
             "firstPlace": "ᑑᑗᐤ ᑟᒢᐤ",
@@ -37,12 +45,7 @@
             "locatie": "ᒐሕᐢ:",
             "p_1": "ᑲᐢᗕᐦᐳᑞ ᐱᓩ ᑳᑪᐭ ᐰᒋᑔ",
             "teams_en_wedstrijden": "ᒦᓵᒨ ᐀ᐪ-ᒠᒵ",
-            "p_2": "ᑌᑿᑦ ᑭᐴᑙ ᐪᑟᐤ ᐄᗐ ᑝ. ᒢᑉኅᑩሙሉ;",
-            "p_3": "ᑌᑿᑦ ᒍᐹᒉᐦ ᑿᒢᐢ ᑖᑎ ᑐᐻᐈᐈᑓ ᐠᑴ",
-            "p_4": "ᑳᑂ ᑩ፼ᒋ ᐲᐫᑌᑦ ᐳነር ᑏᐦ.",
-            "p_5": "ጦ⚭ ᑿᑉᒨ ᑓᑶᒄᑲ",
-            "p_6": "ጢᖟ ᑂᒶᑛ ᑐᑯ ᐼᑁ ᑟᐤ ᘏ៦ ᑭဈᕄ.",
-            "p_7": "ᑛᐋᒯᐰ 10 ᘍᐦ ᑬ ᑑᐷ ᑗᐎ:",
+            "p_2": "ᑌᑿᑦ ᑭᐴᑙ ᐪᑟᐤ ᐄᗐ ᑝ. ᒢᑉኅᑩሙሉ;<br>ᑌᑿᑦ ᒍᐹᒉᐦ ᑿᒢᐢ ᑖᑎ ᑐᐻᐈᐈᑓ ᐠᑴ<br>ᑳᑂ ᑩ፼ᒋ ᐲᐫᑌᑦ ᐳነር ᑏᐦ.<br>ጦ⚭ ᑿᑉᒨ ᑓᑶᒄᑲ<br>ጢᖟ ᑂᒶᑛ ᑐᑯ ᐼᑁ ᑟᐤ ᘏ៦ ᑭဈᕄ.<br>ᑛᐋᒯᐰ 10 ᘍᐦ ᑬ ᑑᐷ ᑗᐎ:",
             "tijdschema": "ᐇᑌᑷ",
             "th_1": "ᒡᐄᐨ",
             "th_2": "ᒟᒢᒋ ᒶል᜶",
@@ -97,6 +100,14 @@
             "p": "THE MOST EXCITING KART TOURNAMENT",
             "inschrijven": "Sign up now"
         },
+        "teams" : 
+        {
+            "team_search_placeholder" : "Search for team...",
+            "teammember_plate" : "Members",
+            "winner_plate" : "Winner",
+            "on_plate" : "on",
+            "teams_plate" : "Competing pouls"
+        },
         "prijzen": {
             "heading": "Karting Prices",
             "firstPlace": "1st Place",
@@ -128,12 +139,7 @@
             "locatie": "Location:",
             "p_1": "Powerarea - Mamelis 1, Lemiers Vaals. A modern kart track with challenging indoor and outdoor tracks.",
             "teams_en_wedstrijden": "Teams and Races",
-            "p_2": "Teams of 4 people (random assignment).",
-            "p_3": "There is a warm-up round and qualifying round, followed by the \"Grand Prix\"",
-            "p_4": "The team with the most points wins.",
-            "p_5": "Everything below the top 10 gets no points",
-            "p_6": "For each position you drop, 1 point is deducted, so:",
-            "p_7": "1st 10 points, 2nd 9 points, etc.",
+            "p_2": "Teams of 4 people (random assignment).<br>There is a warm-up round and qualifying round, followed by the \"Grand Prix\"<br>The team with the most points wins.<br>Everything below the top 10 gets no points<br>For each position you drop, 1 point is deducted, so:<br>1st 10 points, 2nd 9 points, etc.",
             "tijdschema": "Schedule",
             "th_1": "Time",
             "th_2": "Activity",
@@ -188,6 +194,14 @@
             "p" :"HET SPANNENDSTE KARTTOERNOOI",
             "inschrijven" : "Schrijf je nu in"
         },
+        "teams" : 
+        {
+            "team_search_placeholder" : "Zoek team...",
+            "teammember_plate" : "Leden",
+            "winner_plate" : "Winnaar",
+            "on_plate" : "op",
+            "teams_plate" : "Spelende pouls"
+        },
         "prijzen" : {
             "heading" : "Karting Prijzen",
             "firstPlace" : "1e plaats",
@@ -219,12 +233,7 @@
             "locatie": "Locatie:",
             "p_1": "Powerarea - Mamelis 1, Lemiers Vaals. Een moderne kartbaan met uitdagende indoor en outdoor tracks.",
             "teams_en_wedstrijden": "Teams en Wedstrijden",
-            "p_2": "Teams van 4 personen (random indeling).",
-            "p_3": "Er is een opwarmings ronde en kwalificatie ronde, daarna volgt de \"Grand Prix\"",
-            "p_4": "Het team met de meeste punten wint.",
-            "p_5": "Alles onder de top 10 krijgt geen punten",
-            "p_6": "ieder plek wat je omlaag gaat is 1 punt er vanaf dus:",
-            "p_7": "1ste 10 punten, 2de 9 punten etc.",
+            "p_2": "Teams van 4 personen (random indeling).<br>Er is een opwarmings ronde en kwalificatie ronde, daarna volgt de \"Grand Prix\"<br>Het team met de meeste punten wint.<br>Alles onder de top 10 krijgt geen punten<br>ieder plek wat je omlaag gaat is 1 punt er vanaf dus:<br>1ste 10 punten, 2de 9 punten etc.",
             "tijdschema": "Tijdschema",
             "th_1": "Tijd",
             "th_2": "Activiteit",

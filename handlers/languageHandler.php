@@ -12,7 +12,7 @@ if(isset($_COOKIE['lang']))
 }
 
 // Get language packs
-$jsonLanguagePacks = file_get_contents('lang.json'); 
+$jsonLanguagePacks = file_get_contents('./assets/languagePacks/lang.json'); 
 
 if ($jsonLanguagePacks === false) {
     die('Error reading the JSON file');
