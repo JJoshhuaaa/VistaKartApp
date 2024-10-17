@@ -49,7 +49,29 @@
         const content = pouleTemplate.content.cloneNode(true);
         entryElem.style = pouleTemplate.getAttribute('style');
         entryElem.className = pouleTemplate.getAttribute('class');
-        content.querySelector('[for="naam"]').textContent = `${poule.naam} (${members.length}/4)`;
+        const pouleNameElem = content.querySelector('[for="naam"]');
+        pouleNameElem.textContent = `${poule.naam}`;
+
+        pouleNameElem.addEventListener('keydown', async event => {
+            if(event.keyCode !== 13)
+                return;
+            event.preventDefault();
+            document.activeElement.blur();
+
+            const req = await fetch('/adminpanel/rest.php?path=poule_rename', {
+                method: 'POST',
+                body: JSON.stringify({ name: pouleNameElem.textContent, id: parseInt(poule.id) })
+            });
+            const body = await req.json();
+            if (body.error)
+                return alert(body.error);
+            poules = body;
+
+            createPoules();
+        });
+
+        content.querySelector('[for="count"]').textContent = `(${members.length}/4)`;
+
         const entryList = content.querySelector('[for="entry-list"');
 
         for (let i = 0; i < 4; i++) {
