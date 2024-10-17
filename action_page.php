@@ -25,11 +25,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: inschrijfsysteem.php?error=email_exists");
         exit();
     } else {
-        // SQL-query om gegevens in de database in te voegen
-        $sql = "INSERT INTO leerlingen (naam, achternaam, email) VALUES ('$naam', '$achternaam' ,'$email')";
-
         // Uitvoeren van de query en controleren op succes
-        if (mysqli_query($link, $sql)) {
+        if ($link->query("INSERT INTO leerlingen (naam, achternaam, email) VALUES ('$naam', '$achternaam' ,'$email')")) {
+            $depth = 0;
+            $leerlingId = $link->insert_id;
+
+            repeat:
+            $poules = $link->query('SELECT * FROM poules')->fetch_all(MYSQLI_ASSOC);
+            $assignedPoule = false;
+            for($i = 0; $i < count($poules); $i++) {
+                $pouleMembers = json_decode($poules[$i]['members']);
+                if(count($pouleMembers) < 4) {
+                    array_push($pouleMembers, $leerlingId);
+                    
+                    $prep = $link->prepare('UPDATE poules SET members=? WHERE id=?');
+                    $prep->bind_param('si', $jsonArr, $poules[$i]['id']);
+                    $jsonArr = json_encode($pouleMembers);
+                    
+                    if(!$prep->execute())
+                        continue;
+
+                    $assignedPoule = true;
+                    break;
+                }
+            }
+
+            if(!$assignedPoule) {
+                $pouleCount = intval($link->query('SELECT count(*) AS count FROM poules')->fetch_assoc()['count']) + 1;
+
+                $statement = $link->prepare('INSERT INTO poules (naam) VALUES (?)');
+                $statement->bind_param('s', $name);
+                $name = 'poule #' . $pouleCount;
+                
+                $statement->execute();
+
+                if($depth++ < 5)
+                    goto repeat;
+            }
+            
             // Registratie geslaagd, redirect naar prijzenpagina
             header("Location: prijzen.php");
             exit();
