@@ -56,7 +56,7 @@
         <div class="modal-content">
             <span class="close" data-modal="modal-2">&times;</span>
             <img src="img/2.png" loading="lazy" alt="">
-            <h2><?php echo $lan["secondPrize"]; ?></h2>
+            <h2><?php echo $lang["secondPrize"]; ?></h2>
             <p><?php echo $lang["secondPrizeText"]; ?></p>
         </div>
     </div>
