@@ -10,18 +10,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $achternaam = mysqli_real_escape_string($link, $_POST['achternaam']); 
     $email = mysqli_real_escape_string($link, $_POST['email']);
    
-
-    // Lijst van toegestane e-mails
-    $allowed_emails = [
-        '518997@vistacollege.nl',
-        '517255@vistacollege.nl',
-        '516872@vistacollege.nl',
-        '510586@vistacollege.nl',
-        '92015@vistacollege.nl',
-        'rana.mardikhi@gmail.com',
-    ];
-
-    if (!in_array($email, $allowed_emails)) {
+    //check of het email formaat correct is met regex
+    if(!preg_match('/(?:[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&\'*+\/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/m', $email)) {
         header("Location: inschrijfsysteem.php?error=invalid_email");
         exit();
     }
