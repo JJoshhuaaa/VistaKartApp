@@ -101,20 +101,6 @@
     font-size: 20px;
     user-select: none;
     color: whitesmoke;
-    cursor: pointer;
-}
-
-.poule .title:hover {
-    animation: hover-pulse .5s ease-in-out alternate infinite;
-}
-
-@keyframes hover-pulse {
-    0% {
-        filter: brightness(1);
-    }
-    100% {
-        filter: brightness(.65);
-    }
 }
 
 .entry {

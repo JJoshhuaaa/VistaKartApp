@@ -33,13 +33,6 @@
                 echo json_encode($link->query('SELECT * FROM poules')->fetch_all(MYSQLI_ASSOC));
             else echo json_encode(array('error' => 'unable to delete poule'));
             return;
-        case 'poule_rename':
-            $statement = $link->prepare('UPDATE poules SET naam=? WHERE id=?');
-            $statement->bind_param('si', $body->name, $body->id);
-            if($statement->execute())
-                echo json_encode($link->query('SELECT * FROM poules')->fetch_all(MYSQLI_ASSOC));
-            else echo json_encode(array('error' => 'unable to edit poule'));
-            return;
         default:
             echo json_encode(array('error' => 'path not defined'));
             return;
