@@ -42,7 +42,10 @@
 
     <template id="poule-template" class="poule">
         <button class="delete-btn" for="delete-poule">X</button>
-        <p class="title" for="naam">poule naam (0/4)</p>
+        <div style="display: flex;gap: 10px;align-items: center;justify-content: center;">
+            <p class="title" contenteditable="true" for="naam">poule naam</p>
+            <span class="title" for="count">(0/4)</span>
+        </div>
         <div class="entries" for="entry-list"></div>
     </template>
 
